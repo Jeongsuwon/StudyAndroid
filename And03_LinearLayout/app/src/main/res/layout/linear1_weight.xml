@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--리니어 레이아웃에서는 반드시 orientation 선언-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+    <!--리니어 레이아웃(모든 레이아웃) 내부에 오는 모든 것들은
+    부모 태그인 리니어 레이아웃의 규칙에 따른다.-->
+    <RelativeLayout
+        android:background="#A82C2C"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
+    <RelativeLayout
+        android:background="#131A95"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="마진"
+        />
+
+    <Button
+        android:layout_marginLeft="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="마진 왼쪽"
+        />
+
+    <Button
+        android:padding="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="패딩"
+        />
+
+    <Button
+        android:paddingLeft="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="패딩 한쪽"
+        />
+
+    <Button
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가시성"
+        />
+    <!--공간 차지 : invisible / 공간 차지 x : gone-->
+    <Button
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가시성2"
+        />
+
+
+    <!--내부에 자식요소를 정렬하는 방식 / or 연산자 사용 가능-->
+    <Button
+        android:gravity="right|top"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="그래비티"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#C67B45"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        />
+</LinearLayout>
+</LinearLayout>
