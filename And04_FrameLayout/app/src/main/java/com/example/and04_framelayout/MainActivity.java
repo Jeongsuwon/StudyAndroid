@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //    ImageView imgv1, imgv2, imgv3;
 
     ArrayList<ImageView> imgList = new ArrayList<>();
-
+//    HashMap<ImageView,> imgMap = new HashMap<>();
 
     //현재 객체를 선언만 해둔 상태에서는 4개의 객체 모두 null인 상태
     //null이 아니게 하려면 어떤 처리가 필요할까?
