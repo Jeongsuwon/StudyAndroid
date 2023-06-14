@@ -10,6 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
 public class LoginActivity extends AppCompatActivity {
     EditText id, pw;
     Button login;
@@ -38,12 +42,27 @@ public class LoginActivity extends AppCompatActivity {
                 //ex) DAO, DTO, VO -> 화면에 떠있는 객체가 아니기때문에 그래픽 작업을 하면 오류가 발생함. -> 일반 클래스
                 //ex) Act, Fragment -> 화면에 떠있는 객체이기때문에 그래픽 작업 가능. 하지만 화면에 떠있는지의 상태를 알려줄 수 있는게 필요 -> Context
                 // -> 일반 클래스에서도 그래픽 처리가 가능하게 만드려면 Activity가 Context라는 것을 파라미터로 보내줬을 때 가능.
+                if(id.getText().toString().equals("admin") && pw.getText().toString().equals("admin1234")){
+
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                if(id.getText().equals("admin") && pw.getText().equals("admin1234")){
-                        startActivity(intent);
+                    intent.putExtra("strkey", id.getText().toString()+" indent");
+                    intent.putExtra("intkey", 3);
+
+                    LoginDTO dto = new LoginDTO(id.getText().toString() + "1", pw.getText().toString() + "1");
+                    intent.putExtra("dtokey", dto);
+
+                    ArrayList<LoginDTO> list = new ArrayList<>();
+
+                    list.add(new LoginDTO("a1","b1"));
+                    list.add(new LoginDTO("a2","b2"));
+                    list.add(new LoginDTO("a3","b3"));
+                    list.add(new LoginDTO("a4","b4"));
+                    list.add(new LoginDTO("a5","b5"));
+
+                    intent.putExtra("list", list); // startActivity메소드 전에 작성
+                    startActivity(intent);
                 }else{
-
-
+                        Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호가 다릅니다.", Toast.LENGTH_SHORT).show();
                 }
 
                 Log.d(TAG, "->" + id.getText());
@@ -52,5 +71,17 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public class JswClass implements Serializable {
+
+    }
+
+    public class JswClass2 implements Serializable{
+
+    }
+
+    public void method(Serializable k){
+        //역직렬화 : JswClass k2 = (JswClass) k;
     }
 }
