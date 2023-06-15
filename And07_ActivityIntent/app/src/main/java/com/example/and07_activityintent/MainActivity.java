@@ -91,6 +91,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_search.setOnClickListener(this);
         btn_send.setOnClickListener(this);
         btn_str.setOnClickListener(this);
+        btn_int.setOnClickListener(this);
+        btn_strint.setOnClickListener(this);
+        btn_list.setOnClickListener(this);
     }
 
 
@@ -113,11 +116,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, TestActivity.class);
             intent.putExtra("int", Integer.parseInt(edt_int.getText().toString()));
             startActivity(intent);
+        }else if(v.getId()==R.id.btn_strint){
+            TestDTO dtoTest = new TestDTO(edt_str.getText().toString(), Integer.parseInt(edt_int.getText().toString()));
+            Intent intent = new Intent(MainActivity.this, TestActivity.class);
+            intent.putExtra("dtotest", dtoTest);
+            startActivity(intent);
+        }else if(v.getId()==R.id.btn_list){
+            ArrayList<TestDTO> list = new ArrayList<>();
+            list.add(new TestDTO(edt_str.getText().toString(), Integer.parseInt(edt_int.getText().toString())));
+            Intent intent = new Intent(MainActivity.this, TestActivity.class);
+            intent.putExtra("list", list);
+            startActivity(intent);
         }
 
-        TestDTO dtoTest = new TestDTO(edt_str.getText().toString(), Integer.parseInt(edt_int.getText().toString()));
-        Intent intent = new Intent(MainActivity.this, TestActivity.class);
-        intent.putExtra("dtotest", dtoTest);
+
+
+
 
             //암시적 인텐트나 명시적 인텐트를 사용해서 통신 후 다시 결과를 받아와야하는 상황에 쓰는 것들이 있음.
             //ActivityLauncher, startActivityForResult
