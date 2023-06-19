@@ -45,15 +45,17 @@
         android:layout_marginTop="3dp"
         android:id="@+id/btn_cola"
         android:layout_width="40dp"
-        android:layout_height="25dp"
+        android:layout_height="20dp"
         android:text="주문하기"
+        android:backgroundTint="#FF0D0D0F"
+
         />
 
     <TextView
         android:id="@+id/txt_ciderCount"
         android:layout_marginTop="35dp"
         android:layout_toRightOf="@id/txt_colaCount"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="60dp"
         android:textSize="12dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,7 +69,7 @@
         android:layout_height="70dp"
         android:src="@drawable/cider"
         android:layout_marginTop="60dp"
-        android:layout_marginLeft="37dp"
+        android:layout_marginLeft="30dp"
         />
         <TextView
         android:id="@+id/txt_cider"
@@ -82,7 +84,8 @@
     <Button
         android:id="@+id/btn_cider"
         android:layout_width="40dp"
-        android:layout_height="25dp"
+        android:layout_height="20dp"
+        android:backgroundTint="#FF0D0D0F"
         android:layout_below="@+id/txt_cider"
         android:layout_toRightOf="@id/btn_cola"
         android:layout_marginTop="3dp"
@@ -108,7 +111,7 @@
         android:src="@drawable/fanta"
         android:layout_toRightOf="@id/img_cider"
         android:layout_marginTop="60dp"
-        android:layout_marginLeft="42dp"
+        android:layout_marginLeft="35dp"
         />
 
     <TextView
@@ -233,56 +236,5 @@
     </RelativeLayout>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--        </LinearLayout>-->
-<!--            <TextView-->
-<!--                android:id="@+id/txt_cash"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="잔액: "-->
-<!--                />-->
-
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_weight="1"-->
-<!--        >-->
-<!--        <Button-->
-<!--            android:id="@+id/btn_change"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="잔돈 반환"-->
-<!--        />-->
-<!--    </LinearLayout>-->
 
 </LinearLayout>

@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_change = findViewById(R.id.btn_change);
 
         btn_cash.setOnClickListener(this);
+        btn_cash.setVisibility(btn_cash.VISIBLE);
+        btn_cash.setEnabled(true);
         btn_cola.setOnClickListener(this);
         btn_cider.setOnClickListener(this);
         btn_fanta.setOnClickListener(this);
