@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/japagi"
+    android:orientation="vertical">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    >
+    <ImageView
+        android:id="@+id/img_cola"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:src="@drawable/cola"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="45dp"
+        />
+    <ImageView
+        android:layout_toRightOf=""
+        android:id="@+id/img_cider"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:src="@drawable/cola"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="45dp"
+        />
+    <ImageView
+        android:id="@+id/img_fanta"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:src="@drawable/cola"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="45dp"
+        />
+    <ImageView
+        android:id="@+id/img_soda"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:src="@drawable/cola"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="45dp"
+        />
+
+</RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="자판기 프로그램"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="vertical"
+        >
+
+
+
+                <TextView
+                android:id="@+id/txt_cola"
+                android:layout_below="@id/img_cola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/txt_colaCount"
+                android:layout_below="@id/txt_cola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="개 남음"
+                />
+            <Button
+                android:layout_below="@+id/txt_colaCount"
+                android:id="@+id/btn_cola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주문하기"
+                />
+
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/img_cider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher_foreground"
+                />
+            <TextView
+                android:id="@+id/txt_cider"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/img_cider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/txt_ciderCount"
+                android:layout_below="@id/txt_cider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="개 남음"
+                />
+
+            <Button
+                android:layout_below="@+id/txt_ciderCount"
+                android:layout_alignParentRight="true"
+                android:id="@+id/btn_cider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주문하기"
+                />
+
+            <ImageView
+                android:id="@+id/img_fanta"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher_foreground"
+                />
+            <TextView
+                android:id="@+id/txt_fanta"
+                android:layout_below="@+id/img_fanta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/txt_fantaCount"
+                android:layout_below="@id/txt_fanta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="개 남음"
+                />
+
+            <Button
+                android:layout_below="@+id/txt_fantaCount"
+                android:id="@+id/btn_fanta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주문하기"
+                />
+
+            <ImageView
+                android:id="@+id/img_soda"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher_foreground"
+                />
+            <TextView
+                android:id="@+id/txt_soda"
+                android:layout_below="@id/img_soda"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/txt_sodaCount"
+                android:layout_below="@id/txt_soda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="개 남음"
+                />
+
+            <Button
+                android:layout_below="@+id/txt_sodaCount"
+                android:layout_alignParentRight="true"
+                android:id="@+id/btn_soda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주문하기"
+                />
+
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+
+            <EditText
+                android:id="@+id/edt_cash"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="금액을 입력하세요."
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:id="@+id/btn_cash"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="금액 입력"
+                />
+
+        </LinearLayout>
+            <TextView
+                android:id="@+id/txt_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="잔액: "
+                />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <Button
+            android:id="@+id/btn_change"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="잔돈 반환"
+        />
+    </LinearLayout>
+
+</LinearLayout>
