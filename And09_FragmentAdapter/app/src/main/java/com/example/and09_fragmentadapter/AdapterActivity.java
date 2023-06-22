@@ -8,7 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.and09_fragmentadapter.grid.GridFragment;
 import com.example.and09_fragmentadapter.listv.ListFragment;
+import com.example.and09_fragmentadapter.practice.MelonFragment;
+import com.example.and09_fragmentadapter.recyler.NormalClass;
+import com.example.and09_fragmentadapter.recyler.RecyclerFragment;
 
 public class AdapterActivity extends AppCompatActivity implements View.OnClickListener {
     ListView listv;
@@ -59,6 +63,7 @@ public class AdapterActivity extends AppCompatActivity implements View.OnClickLi
 //        });
 //
 //        listv.setAdapter(adapter);
+        new NormalClass().testTost(this, "쓰고");
     }
 
     @Override
@@ -67,6 +72,12 @@ public class AdapterActivity extends AppCompatActivity implements View.OnClickLi
         FragmentManager manager = getSupportFragmentManager();
         if(v.getId()==R.id.btn_list){
             manager.beginTransaction().replace(R.id.container, new ListFragment()).commit();
+        }else if(v.getId()==R.id.btn_grid){
+            manager.beginTransaction().replace(R.id.container, new GridFragment()).commit();
+        }else if(v.getId()==R.id.btn_recy){
+            manager.beginTransaction().replace(R.id.container, new RecyclerFragment()).commit();
+        }else if(v.getId()==R.id.btn_practice){
+            manager.beginTransaction().replace(R.id.container, new MelonFragment()).commit();
         }
     }
 }

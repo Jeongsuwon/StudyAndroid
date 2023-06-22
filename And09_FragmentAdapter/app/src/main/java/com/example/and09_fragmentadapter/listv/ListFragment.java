@@ -28,6 +28,11 @@ public class ListFragment extends Fragment {
         list.add(new ListDTO(R.drawable.img3, "캐릭터3", "ㅇㅇ"));
         list.add(new ListDTO(R.drawable.img4, "캐릭터4", "ㅎㅇㅇ"));
         list.add(new ListDTO(R.drawable.img5, "캐릭터5", "ㅅㅇㅅ"));
+        list.add(new ListDTO(R.drawable.img1, "캐릭터6", "ㅋㅋ"));
+        list.add(new ListDTO(R.drawable.img2, "캐릭터7", "ㅎㅎ"));
+        list.add(new ListDTO(R.drawable.img3, "캐릭터8", "ㅂㅂ"));
+        list.add(new ListDTO(R.drawable.img4, "캐릭터9", "ㅂㅇㅇ"));
+        list.add(new ListDTO(R.drawable.img5, "캐릭터9", "ㄴㅇㄱ"));
 
         View v = inflater.inflate(R.layout.fragment_list, container, false);
         listv = v.findViewById(R.id.listv);
