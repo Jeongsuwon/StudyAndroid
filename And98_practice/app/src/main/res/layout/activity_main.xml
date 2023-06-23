@@ -21,7 +21,7 @@
         <LinearLayout
             android:background="#5681CA"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="20dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             >
@@ -30,7 +30,7 @@
             android:background="#5681CA"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:src="@drawable/logo"
             />
 
@@ -39,6 +39,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
+                    android:layout_marginTop="0dp"
+                    android:layout_gravity="center"
                     >
                 <ImageButton
                     android:id="@+id/ibtn_login_logo"
@@ -52,6 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="로그인"
+                    android:layout_gravity="center"
 
                     />
                 </LinearLayout>
@@ -66,31 +69,14 @@
 
                 />
         </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="8"
-        >
-        <ImageButton
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_foreground"
-            />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_foreground"
-            />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_foreground"
-            />
-
-
+            android:layout_weight="8"
+            android:orientation="horizontal"
+            >
+        </LinearLayout>
     </LinearLayout>
 
 
