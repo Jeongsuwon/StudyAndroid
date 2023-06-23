@@ -10,10 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+import com.example.and09_fragmentadapter.databinding.ActivityMainBinding;
 
-    FrameLayout container;
-    Button btn_menu1, btn_menu2, btn_adapter;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    ActivityMainBinding binding;
+//    FrameLayout container;
+//    Button btn_menu1, btn_menu2, btn_adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,14 +26,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 //        container_fl = findViewById(R.id.container); <-FragmentManager에서는 객체로 초기화 된 위젯이 필요 x, 디자인 파일에 있는 id만 명시해주면 o
 
-        btn_menu1 = findViewById(R.id.btn_menu1);
-        btn_menu2 = findViewById(R.id.btn_menu2);
-        btn_adapter = findViewById(R.id.btn_adapter);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot()); //getRoot --> 디자인 xml파일의 최상단 레이아웃
+
+//        btn_menu1 = findViewById(R.id.btn_menu1);
+//        btn_menu2 = findViewById(R.id.btn_menu2);
+//        btn_adapter = findViewById(R.id.btn_adapter);
 
 
-        btn_menu1.setOnClickListener(this);
-        btn_menu2.setOnClickListener(this);
-        btn_adapter.setOnClickListener(this);
+        binding.btnMenu1.setOnClickListener(this);
+        binding.btnMenu2.setOnClickListener(this);
+        binding.btnAdapter.setOnClickListener(this);
 
 
 

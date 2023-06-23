@@ -8,29 +8,36 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.and09_fragmentadapter.databinding.ActivityMainBinding;
 import com.example.and09_fragmentadapter.grid.GridFragment;
 import com.example.and09_fragmentadapter.listv.ListFragment;
 import com.example.and09_fragmentadapter.practice.MelonFragment;
+import com.example.and09_fragmentadapter.practiceMelon.ReMelonFragment;
 import com.example.and09_fragmentadapter.recyler.NormalClass;
 import com.example.and09_fragmentadapter.recyler.RecyclerFragment;
 
 public class AdapterActivity extends AppCompatActivity implements View.OnClickListener {
     ListView listv;
-    Button btn_list, btn_grid, btn_recy, btn_practice;
+
+    Button btn_list, btn_grid, btn_recy, btn_practice, btn_re_practice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adapter);
 
+
+
         btn_list = findViewById(R.id.btn_list);
         btn_grid = findViewById(R.id.btn_grid);
         btn_recy = findViewById(R.id.btn_recy);
         btn_practice = findViewById(R.id.btn_practice);
+        btn_re_practice = findViewById(R.id.btn_re_practice);
 
         btn_list.setOnClickListener(this);
         btn_grid.setOnClickListener(this);
         btn_recy.setOnClickListener(this);
         btn_practice.setOnClickListener(this);
+        btn_re_practice.setOnClickListener(this);
 
         //용도나 형태에 따라서 어댑터의 종류는 많음. 사용빈도가 가장 낮은 것은 오래 된 방식. ( Array형태로 String 넣는 방식)
         //ArrayAdapter (기본적으로 안드로이드에서 제공해주는 어댑터)
@@ -78,6 +85,8 @@ public class AdapterActivity extends AppCompatActivity implements View.OnClickLi
             manager.beginTransaction().replace(R.id.container, new RecyclerFragment()).commit();
         }else if(v.getId()==R.id.btn_practice){
             manager.beginTransaction().replace(R.id.container, new MelonFragment()).commit();
+        }else if(v.getId()==R.id.btn_re_practice){
+            manager.beginTransaction().replace(R.id.container, new ReMelonFragment()).commit();
         }
     }
 }
