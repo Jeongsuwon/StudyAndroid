@@ -23,7 +23,8 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         binding = ActivitySplashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+//        Intent intent = new Intent( this, MainActivity.class);
+//        startActivity(intent);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 

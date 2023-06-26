@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".friend.FriendDetailActivity">
+
+    <FrameLayout
+        android:background="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:id="@+id/imgv_background"
+            android:alpha="0.7"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/kosamui"
+            />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imgv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close_24"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="150dp"
+        android:id="@+id/ln_friend"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="20dp"
+            >
+            <ImageView
+                android:id="@+id/imgv_profile"
+                android:src="@drawable/img1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:textColor="#ffffff"
+            android:id="@+id/tv_name"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="정수원"
+            />
+
+        <TextView
+            android:textColor="#ffffff"
+            android:id="@+id/tv_msg"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="상태메세지"
+            />
+
+        <!--        <Button-->
+        <!--            android:background="#ffffff"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="상태메시지 올리기"-->
+        <!--            android:textColor="black" />-->
+
+
+
+    </LinearLayout>
+</FrameLayout>
