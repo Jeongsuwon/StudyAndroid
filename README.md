@@ -1,6 +1,6 @@
 
 ![KakaoTalk_20230626_220506868_03](https://github.com/Jeongsuwon/StudyAndroid/assets/129022812/5391dbbc-6ff1-448b-86d6-809c50f4a55f)
-<img src="https://github.com/Jeongsuwon/StudyAndroid/assets/129022812/5391dbbc-6ff1-448b-86d6-809c50f4a55f  width="431" height="961"/>
+<img src="https://github.com/Jeongsuwon/StudyAndroid/assets/129022812/5391dbbc-6ff1-448b-86d6-809c50f4a55f.jpg  width="431" height="961"/>
 ![둘러보기](https://github.com/Jeongsuwon/StudyAndroid/assets/129022812/3ad278ec-cdbe-4619-942c-8c4f7910fb16)
 ![KakaoTalk_20230626_220506868_05](https://github.com/Jeongsuwon/StudyAndroid/assets/129022812/0e2bd9ce-7b51-4171-aa19-ea6e097f0559)
 ![KakaoTalk_20230626_220506868_06](https://github.com/Jeongsuwon/StudyAndroid/assets/129022812/ffac45de-21de-4abc-9c10-c55f0a39be42)
