@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.project01_jswtalk.chat.ChatFragment;
 import com.example.project01_jswtalk.databinding.ActivityMainBinding;
 import com.example.project01_jswtalk.friend.FriendFragment;
+import com.example.project01_jswtalk.opentalk.OpenTalkMainFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             if(item.getItemId()==R.id.tab1){
                 fragment = new FriendFragment();
                 actionBar.setTitle("친구");
+
             }else if(item.getItemId()==R.id.tab2){
                 fragment = new ChatFragment();
                 actionBar.setTitle("채팅");
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             }else if(item.getItemId()==R.id.tab3){
+                fragment = new OpenTalkMainFragment();
                 actionBar.setTitle("오픈채팅");
             }else if(item.getItemId()==R.id.tab4){
                 actionBar.setTitle("쇼핑");
@@ -57,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;//메뉴가 바뀌는 처리를 취소한다. ( 들어올가능성없음 )
             }
             if(fragment == null) {
-                Toast.makeText(this, "아직 메뉴가 준비가 안되었습니다.!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "아직 메뉴가 준비가 안되었습니다!!", Toast.LENGTH_SHORT).show();
             }else{
                 manager.beginTransaction().replace(R.id.container, fragment).commit();
             }

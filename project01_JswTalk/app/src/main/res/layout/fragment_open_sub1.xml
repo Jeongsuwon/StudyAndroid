@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".opentalk.OpenSub1Fragment"
+
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/imgv_banner"
+            android:layout_margin="10dp"
+            android:scaleType="fitStart"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:src="@drawable/banner_img1"
+            />
+        <TextView
+            android:id="@+id/tv_no_chat"
+            android:layout_below="@id/imgv_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="참여 중인 오픈채팅방이 없어요!"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tv_chatCreate"
+            android:layout_below="@id/tv_no_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="관심 주제로 직접 만들어 보세요"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textSize="10dp"
+            />
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="150dp"
+            android:layout_below="@id/tv_chatCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="만들기"
+            android:gravity="center"
+            />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#959595"
+        />
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+            <TextView
+                android:id="@+id/tv_category1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오픈채팅 오리지널 : 거지방"
+                />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/recv_chat_room"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+    <View
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#959595"
+        />
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_category2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비 올땐 감성에 젖어야지"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            >
+
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recv_listen"
+
+                >
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+        </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#959595"
+        />
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_category3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="보글보글, 라면을 먹을 시간"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recv_lamen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#959595"
+        />
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_category4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이런 주제 어때요?"
+            />
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="농놀"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="철권"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="뉴진스"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="식충식물"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="피아노"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="집밥"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="뜨개질"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="너의이름은"/>
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+        <View
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#959595"
+            />
+</LinearLayout>
+
+</LinearLayout>
+</ScrollView>
+</LinearLayout>

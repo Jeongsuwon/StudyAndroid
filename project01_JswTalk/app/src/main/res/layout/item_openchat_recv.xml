@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="5dp"
+    android:id="@+id/rnOpenChat"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <ImageView
+            android:alpha="0.7"
+            android:id="@+id/imgv_categroy1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img1"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_openChat_title1"
+            android:textColor="#000000"
+            android:layout_marginLeft="10dp"
+            android:layout_above="@id/tv_openChat_info1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="안고독한거지방"
+            />
+
+        <TextView
+            android:id="@+id/tv_openChat_info1"
+            android:textColor="#000000"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@id/imgv_categroy1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7dp"
+            android:text="269명 | 30분 전"
+            />
+
+    </RelativeLayout>
+

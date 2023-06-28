@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".opentalk.OpenChatDetailActivity"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E1DDD7D7"
+        android:alpha="0.7"
+        >
+        <ImageView
+            android:id="@+id/imgv_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/back1"
+            android:scaleType="fitXY"
+            />
+        <ImageView
+            android:id="@+id/imgv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_24"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            >
+
+
+            <TextView
+                android:layout_marginRight="10dp"
+                android:id="@+id/hashtag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:layout_toRightOf="@id/room_cha"
+                android:layout_above="@id/room_cha"
+                android:text="#거지 #거지방 #백수 #알거지 #하루살이 #일상 #노숙자 #뒹굴뒹굴 #리그오브거지 #SNS거지 #페이스북거지 #인스타거지 #거지핫플 #꽃거지"
+                />
+
+            <TextView
+                android:id="@+id/room_master"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/room_cha"
+                android:text="냥쥐"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                android:layout_above="@id/room_info"
+                />
+
+            <TextView
+                android:id="@+id/room_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/like"
+                android:layout_marginBottom="50dp"
+                android:layout_toRightOf="@id/room_cha"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                android:text="146명/200명 | 개설일 2023. 4. 7" />
+
+            <TextView
+                android:id="@+id/chat_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="그룹채팅"
+                android:textSize="15dp"
+                android:layout_above="@id/room_title"
+                android:layout_toRightOf="@id/room_cha"
+                android:textColor="#ffffff"
+                />
+
+            <TextView
+                android:id="@+id/room_title"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="거지방(#원조 #SNS #거지들의 핫한방)"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:layout_above="@id/hashtag"
+                android:layout_toRightOf="@id/room_cha"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/room_cha"
+                android:layout_above="@id/like"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="20dp"
+                >
+                <ImageView
+                    android:id="@+id/imgv_profile"
+                    android:src="@drawable/room_cha"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    />
+            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/like"
+                android:layout_alignParentBottom="true"
+                android:paddingHorizontal="5dp"
+                />
+            <ImageView
+                android:id="@+id/participate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/participate"
+                android:layout_toRightOf="@id/like"
+                android:layout_alignParentBottom="true"
+
+                />
+        </RelativeLayout>
+
+    </FrameLayout>
+    
+    
+
+</LinearLayout>

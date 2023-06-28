@@ -1,0 +1,31 @@
+package com.example.project01_jswtalk.opentalk;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import java.util.ArrayList;
+
+public class FragmentAdapter extends FragmentStateAdapter {
+    //FragmentStateAdapter <= 프래그먼트와 viewPager2 & RecyclerView  세트로 많이 사용되는 어탭터
+    //사용방법 자체가 엄청 간단함.
+
+    ArrayList<Fragment> list;
+
+    public FragmentAdapter(@NonNull Fragment fragment, ArrayList<Fragment> list) {
+        super(fragment);
+        this.list = list;
+    }
+
+    @NonNull
+    @Override
+    public Fragment createFragment(int i) {
+        return list.get(i);
+    }
+
+    @Override
+    public int getItemCount() {
+        return list.size();
+    }
+
+}
