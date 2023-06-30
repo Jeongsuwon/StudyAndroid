@@ -4,120 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
     tools:context=".MainActivity"
     android:orientation="vertical">
     
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="vertical"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@drawable/recmd"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-        <ImageView
-            android:background="#AEC5CB"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="40dp"
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:src="@drawable/utilize"
-            />
+        />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="start"
+        android:background="@color/black"
+        app:menu="@menu/btm_main_nav" />
 
-            <ImageView
-                android:layout_toLeftOf="@id/imgv_notify"
-                android:layout_marginTop="30dp"
-                android:layout_width="30dp"
-                android:layout_height="25dp"
-                android:src="@drawable/mic"
-                />
-            <ImageView
-                android:id="@+id/imgv_notify"
-                android:layout_marginTop="30dp"
-                android:layout_width="30dp"
-                android:layout_height="25dp"
-                android:src="@drawable/notifications"
-                android:layout_toLeftOf="@id/imgv_set"
-                />
-            <ImageView
-                android:id="@+id/imgv_set"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="50dp"
-                android:layout_marginTop="30dp"
-                android:layout_width="30dp"
-                android:layout_height="25dp"
-                android:src="@drawable/settings"
-                />
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            >
-            <ImageView
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="60dp"
-                android:layout_centerVertical="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/play"
-            />
-        </RelativeLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="5dp"
-        android:layout_weight="1">
-
-        <RelativeLayout
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <TextView
-                android:layout_marginTop="30dp"
-                android:id="@+id/tv_category1"
-                android:textColor="@color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="좋아할만한 최신앨범"
-                />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/forward"
-                android:layout_toRightOf="@id/tv_category1"
-                android:layout_alignTop="@id/tv_category1"
-                />
-
-            <ImageView
-                android:layout_below="@id/tv_category1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/category1_sing1"
-                />
-
-            <ImageView
-                android:layout_below="@id/tv_category1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/category1_sing2"
-                />
-
-        </RelativeLayout>
-
-
-    </LinearLayout>
     
 </LinearLayout>

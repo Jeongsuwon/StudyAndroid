@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".around.ChartFragment"
+    android:orientation="vertical"
+    android:background="#000000"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginVertical="10dp"
+        >
+    <TextView
+        android:id="@+id/tv_chart_category1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/main_color"
+        android:textSize="20dp"
+        android:text="차트"
+        />
+
+    <ImageView
+        android:layout_toRightOf="@id/tv_chart_category1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/forward"
+        />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginHorizontal="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_radius"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/tv_category_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FLO 차트"
+                android:textColor="@color/main_color"
+            />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tv_category_title1"
+                android:textColor="#6F7072"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:text="22시 기준"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:layout_marginTop="3dp"
+                android:id="@+id/imgv_lsWhool"
+                android:src="@drawable/full_foward"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                />
+            <TextView
+                android:id="@+id/tv_lsWhool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전체듣기"
+                android:textColor="#ffffff"
+                android:layout_alignParentRight="true"
+                android:textSize="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            >
+            <TextView
+                android:id="@+id/tv_category_info1"
+                android:layout_below="@id/tv_category_title1"
+                android:textSize="10dp"
+                android:textColor="#6F7072"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최근 24시간 집계, FLO 최고 인기곡 차트!"
+                android:layout_marginBottom="10dp"
+                />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                >
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="370dp"
+                android:background="@drawable/recv_radius"
+                android:id="@+id/recv_flo_chart"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+        </ScrollView>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

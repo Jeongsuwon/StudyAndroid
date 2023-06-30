@@ -17,8 +17,8 @@ public class OpenTalkAdapter extends RecyclerView.Adapter<OpenTalkAdapter.ViewHo
     ItemOpenchatRecvBinding binding;
     ArrayList<OpenChatDTO> list;
 
-//    ArrayList<OpenChatDetailDTO> list2;
     Context context;
+
 
 
 
@@ -31,7 +31,8 @@ public class OpenTalkAdapter extends RecyclerView.Adapter<OpenTalkAdapter.ViewHo
     @NonNull
     @Override
     public ViewHoler onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        //LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         binding = ItemOpenchatRecvBinding.inflate(inflater, parent, false);
         return new ViewHoler(binding);
     }

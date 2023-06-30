@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".around.AroundFragment"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_marginLeft="20dp"
+        android:id="@+id/chip_grp"
+        app:singleSelection="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/around_chip_1"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="차트"
+            android:textColor="@color/main_color"
+            app:chipIconTint="@drawable/chip_around_color"
+            app:chipBackgroundColor="@drawable/chip_around_color"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/around_chip_2"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="장르.테마"
+            android:textColor="@color/main_color"
+            app:chipIconTint="@drawable/chip_around_color"
+            app:chipBackgroundColor="@drawable/chip_around_color"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/around_chip_3"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오디오"
+            android:textColor="@color/main_color"
+            app:chipIconTint="@drawable/chip_around_color"
+            app:chipBackgroundColor="@drawable/chip_around_color"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/around_chip_4"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="영상"
+            android:textColor="@color/main_color"
+            app:chipIconTint="@drawable/chip_around_color"
+            app:chipBackgroundColor="@drawable/chip_around_color"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/around_chip_5"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="크리에이터"
+            android:textColor="@color/main_color"
+            app:chipIconTint="@drawable/chip_around_color"
+            app:chipBackgroundColor="@drawable/chip_around_color"
+            />
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+</LinearLayout>

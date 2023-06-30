@@ -13,13 +13,15 @@ import com.example.andproject.databinding.ActivitySplashBinding;
 public class SplashActivity extends AppCompatActivity {
 
     ActivitySplashBinding binding;
+    ActionBar actionBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivitySplashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
+        actionBar = getSupportActionBar();
+        actionBar.hide();
         ProgressDialog dialog = new ProgressDialog(this);
         dialog.setTitle("FLO");
         dialog.setCancelable(false);

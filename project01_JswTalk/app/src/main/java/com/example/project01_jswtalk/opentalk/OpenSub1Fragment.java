@@ -36,12 +36,7 @@ public class OpenSub1Fragment extends Fragment {
         return binding.getRoot();
     }
 
-//    ArrayList<OpenChatDetailDTO> getDetail(){
-//        ArrayList<OpenChatDetailDTO> list = new ArrayList<>();
-//        list.add(new OpenChatDetailDTO(R.drawable.back1, R.drawable.))
-//
-//        return list;
-//    }
+
 
     ArrayList<LamenDTO> getLamen(){
         ArrayList<LamenDTO> list = new ArrayList<>();

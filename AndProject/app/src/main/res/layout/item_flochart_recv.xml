@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#18191B"
+    android:id="@+id/rn_flo_chart"
+
+    >
+
+
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/imgv_chartSong1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chart_img1"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_rank1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="#ffffff"
+        android:layout_toRightOf="@id/imgv_chartSong1"
+        android:layout_alignTop="@id/imgv_chartSong1"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_flo_chart_song1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="퀸카(Queencard)"
+        android:textColor="#ffffff"
+        android:layout_toRightOf="@id/tv_rank1"
+        android:layout_alignTop="@id/tv_rank1"
+        android:textSize="12dp"
+        />
+    <TextView
+        android:id="@+id/tv_flo_singer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(여자)아이들"
+        android:textColor="#6F7072"
+        android:layout_toRightOf="@id/tv_rank1"
+        android:layout_below="@id/tv_rank1"
+        android:textSize="9dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgv_ls_song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/full_foward"
+        android:layout_alignTop="@id/tv_flo_chart_song1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        />
+</RelativeLayout>
