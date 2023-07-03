@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    >
+
+    <ImageView
+        android:id="@+id/imgv_summer"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/recv_radius"
+        android:src="@drawable/summer_img1" />
+
+    <ImageView
+        android:id="@+id/imgv_home_play"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/full_foward"
+        android:layout_alignBottom="@id/imgv_summer"
+        android:layout_alignRight="@id/imgv_summer"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_summer_title1"
+        android:layout_alignStart="@id/imgv_summer"
+        android:layout_below="@id/imgv_summer"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="갓쇼의 사이다썰"
+        android:textSize="12dp"
+        />
+    <TextView
+        android:id="@+id/tv_summer_singer"
+        android:layout_below="@id/tv_summer_title1"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="예능/미스터리"
+        android:layout_alignStart="@id/tv_summer_title1"
+        android:textColor="#7F7F7F"
+        android:textSize="10dp"
+        />
+
+</RelativeLayout>

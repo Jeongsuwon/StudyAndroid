@@ -3,6 +3,7 @@ package com.example.andproject.home;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,6 +18,10 @@ import com.example.andproject.PagerAdapter;
 import com.example.andproject.R;
 import com.example.andproject.databinding.FragmentHomeBinding;
 import com.google.android.material.chip.ChipGroup;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.options.IFramePlayerOptions;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
 import java.util.ArrayList;
 
@@ -29,12 +34,23 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        IFramePlayerOptions iFramePlayerOptions = new IFramePlayerOptions.Builder()
+                .controls(1)
+                .fullscreen(1)
+                .build();
+
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         binding.recvHomeNewest.setAdapter(new HomeAdapter(getHome(), getContext()));
         binding.recvHomeNewest.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
 
         binding.recvHomeAudio.setAdapter(new HomeAdapter(getHome_audio(), getContext()));
         binding.recvHomeAudio.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
+
+        binding.recvSummer.setAdapter(new HomeAdapter(getHome_summer(), getContext()));
+        binding.recvSummer.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL, false));
+
+//        binding.recvVideo.setAdapter(new HomeAdapter(getHome_video(), getContext()));
+//        binding.recvVideo.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL, false));
 
         binding.imgvUtilize.setOnClickListener(v -> {
             Intent intent = new Intent(getContext(), UtilizeActivity.class);
@@ -51,11 +67,11 @@ public class HomeFragment extends Fragment {
             @Override
             public void onCheckedChanged(ChipGroup group, int checkedId) {
                 if(checkedId == R.id.today_chip_1){
-                    binding.pagerToday.setCurrentItem(0, true);
-                }else if(checkedId == R.id.today_chip_2){
                     binding.pagerToday.setCurrentItem(1, true);
-                }else if(checkedId == R.id.today_chip_3){
+                }else if(checkedId == R.id.today_chip_2){
                     binding.pagerToday.setCurrentItem(2, true);
+                }else if(checkedId == R.id.today_chip_3){
+                    binding.pagerToday.setCurrentItem(3, true);
                 }
             }
         });
@@ -115,5 +131,28 @@ public class HomeFragment extends Fragment {
         return list;
     }
 
+    public ArrayList<HomeCateDTO> getHome_summer(){
+        ArrayList<HomeCateDTO> list = new ArrayList<>();
+
+        list.add(new HomeCateDTO(R.drawable.summer_img1,R.drawable.full_foward, "만성피로에 비타민 같은 상큼 케이팝",""));
+        list.add(new HomeCateDTO(R.drawable.summer_img2,R.drawable.full_foward, "고막 제습기 상큼 팝",""));
+        list.add(new HomeCateDTO(R.drawable.summer_img3,R.drawable.full_foward, "습도 100%? 내 기분은 습도 0%",""));
+        list.add(new HomeCateDTO(R.drawable.summer_img4,R.drawable.full_foward, "출근길 잠 깨워주는 시원한 팝",""));
+        list.add(new HomeCateDTO(R.drawable.summer_img5,R.drawable.full_foward, "산뜻한 발라드로 불쾌 지수 잠 재우기",""));
+        list.add(new HomeCateDTO(R.drawable.summer_img6,R.drawable.full_foward, "상쾌함 가득 담은 K-힙합과 알앤비▤",""));
+        list.add(new HomeCateDTO(R.drawable.summer_img7,R.drawable.full_foward, "출퇴근 길이 드라이브 코스가 돼",""));
+        return list;
+    }
+
+    public ArrayList<HomeCateDTO> getHome_video(){
+        ArrayList<HomeCateDTO> list = new ArrayList<>();
+        list.add(new HomeCateDTO(R.drawable.video_img1, R.drawable.full_foward, "[MV]질주(OVERDRIVE)", "위아이(WEi)"));
+        list.add(new HomeCateDTO(R.drawable.video_img2, R.drawable.full_foward, "[MV]장마", "박보람"));
+        list.add(new HomeCateDTO(R.drawable.video_img3, R.drawable.full_foward, "[MV]LOSER", "AB6IX(에이비식스)"));
+        list.add(new HomeCateDTO(R.drawable.video_img4, R.drawable.full_foward, "[MV]나의 곷, 너의 빛(Bloom)", "양희은 & 첸"));
+        list.add(new HomeCateDTO(R.drawable.video_img5, R.drawable.full_foward, "[MV]모래 알갱이", "임영웅"));
+
+        return list;
+    }
 
 }
