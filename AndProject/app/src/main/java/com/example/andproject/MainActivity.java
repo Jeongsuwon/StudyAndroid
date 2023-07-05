@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new SearchFragment();
                 actionBar.setTitle("검색");
             }else if(item.getItemId() == R.id.tab_repository){
-
+//                fragment = new RepositoryFragment();
+                actionBar.setTitle("저장소");
             }
             manager.beginTransaction().replace(R.id.container, fragment).commit();
 

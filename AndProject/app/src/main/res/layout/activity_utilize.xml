@@ -107,6 +107,8 @@
 
 
         </com.google.android.material.chip.ChipGroup>
+
+
     </LinearLayout>
 
     <!--/chip group    -->
@@ -117,11 +119,20 @@
         android:background="#2E282B"
         />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/pager_utilize"
+    <FrameLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         />
 
+<!--    <androidx.viewpager2.widget.ViewPager2-->
+<!--        android:id="@+id/pager_utilize"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="1"-->
+<!--        />-->
+
 </LinearLayout>
+
+

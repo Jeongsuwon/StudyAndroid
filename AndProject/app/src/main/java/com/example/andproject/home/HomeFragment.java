@@ -34,10 +34,6 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        IFramePlayerOptions iFramePlayerOptions = new IFramePlayerOptions.Builder()
-                .controls(1)
-                .fullscreen(1)
-                .build();
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         binding.recvHomeNewest.setAdapter(new HomeAdapter(getHome(), getContext()));
@@ -49,8 +45,7 @@ public class HomeFragment extends Fragment {
         binding.recvSummer.setAdapter(new HomeAdapter(getHome_summer(), getContext()));
         binding.recvSummer.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL, false));
 
-//        binding.recvVideo.setAdapter(new HomeAdapter(getHome_video(), getContext()));
-//        binding.recvVideo.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL, false));
+
 
         binding.imgvUtilize.setOnClickListener(v -> {
             Intent intent = new Intent(getContext(), UtilizeActivity.class);
@@ -144,15 +139,8 @@ public class HomeFragment extends Fragment {
         return list;
     }
 
-    public ArrayList<HomeCateDTO> getHome_video(){
-        ArrayList<HomeCateDTO> list = new ArrayList<>();
-        list.add(new HomeCateDTO(R.drawable.video_img1, R.drawable.full_foward, "[MV]질주(OVERDRIVE)", "위아이(WEi)"));
-        list.add(new HomeCateDTO(R.drawable.video_img2, R.drawable.full_foward, "[MV]장마", "박보람"));
-        list.add(new HomeCateDTO(R.drawable.video_img3, R.drawable.full_foward, "[MV]LOSER", "AB6IX(에이비식스)"));
-        list.add(new HomeCateDTO(R.drawable.video_img4, R.drawable.full_foward, "[MV]나의 곷, 너의 빛(Bloom)", "양희은 & 첸"));
-        list.add(new HomeCateDTO(R.drawable.video_img5, R.drawable.full_foward, "[MV]모래 알갱이", "임영웅"));
 
-        return list;
-    }
+
+
 
 }

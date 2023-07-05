@@ -104,15 +104,14 @@
                 />
         </LinearLayout>
 
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scrollbars="horizontal"
-            >
+<!--        <ScrollView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:scrollbars="horizontal"-->
+<!--            >-->
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_weight="1"
                 >
             <androidx.recyclerview.widget.RecyclerView
@@ -124,7 +123,7 @@
 
             </androidx.recyclerview.widget.RecyclerView>
             </RelativeLayout>
-        </ScrollView>
+<!--        </ScrollView>-->
 
 
 

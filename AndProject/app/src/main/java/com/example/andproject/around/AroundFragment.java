@@ -31,7 +31,7 @@ public class AroundFragment extends Fragment {
             @Override
             public void onCheckedChanged(ChipGroup group, int checkedId) {
                 if(checkedId == R.id.around_chip_1){
-                    binding.pager.setCurrentItem(0, true);
+                    binding.pager.setCurrentItem(1, true);
                 }
             }
         });
