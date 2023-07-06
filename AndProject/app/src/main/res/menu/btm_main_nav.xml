@@ -7,25 +7,25 @@
         android:enabled="true"
         app:showAsAction="ifRoom"
         android:icon="@drawable/tab_home"
-        android:title=""
+        android:title="홈"
         />
     <item
         android:id="@+id/tab_around"
         app:showAsAction="ifRoom"
         android:icon="@drawable/tab_around"
-        android:title=""
+        android:title="둘러보기"
         />
     <item
         android:id="@+id/tab_search"
         app:showAsAction="ifRoom"
         android:icon="@drawable/tab_search"
-        android:title=""
+        android:title="검색"
         />
     <item
         android:id="@+id/tab_repository"
         app:showAsAction="ifRoom"
         android:icon="@drawable/tab_repository"
-        android:title=""
+        android:title="보관함"
         />
 
 

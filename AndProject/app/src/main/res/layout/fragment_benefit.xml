@@ -4,16 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home.BenefitFragment"
+    android:background="#000000"
     android:orientation="vertical"
     >
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#212226"
+        android:background="@drawable/recv_radius"
+        android:orientation="vertical"
         android:layout_marginHorizontal="15dp"
         android:layout_marginVertical="20dp"
+
+>
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
         >
 
         <ImageView
@@ -32,7 +41,227 @@
             />
 
     </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SKT 특정 요금제 및 부가서비스 사용 고객 전용 무료 혜택"
+                android:textColor="#494D51"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FLO 앤 데이터(플러스)"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18dp"
+
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center"
+                android:src="@drawable/forward"
+                />
+
+            <Button
+                android:layout_marginLeft="55dp"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text="발급"
+                android:textSize="13dp"
+                android:textColor="#123456"
+                android:backgroundTint="@color/black"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="부가서비스 혜택, 무제한 스트리밍, 데이터 프리"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            />
+
+        <LinearLayout
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SKT 요금제 무제한 혜택"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center"
+                android:src="@drawable/forward"
+                />
+
+            <Button
+                android:layout_marginLeft="50dp"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text="발급"
+                android:textSize="13dp"
+                android:textColor="#123456"
+                android:backgroundTint="@color/black"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data 인피니티, 0플랜 라지, 슈퍼히어로"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            />
+
+        <LinearLayout
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기본 요금제 100회 혜택"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center"
+                android:src="@drawable/forward"
+                />
+
+            <Button
+                android:layout_marginLeft="50dp"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text="발급"
+                android:textSize="13dp"
+                android:textColor="#123456"
+                android:backgroundTint="@color/black"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="특정 요금제 혜택, 횟수 제한"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginBottom="25dp"
+                android:textSize="10dp"
+                />
+
+
+        </LinearLayout>
 
 
 
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/t_info" />
+    </LinearLayout>
 </LinearLayout>

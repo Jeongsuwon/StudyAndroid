@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CompoundButton;
 
 import com.example.andproject.PagerAdapter;
@@ -29,7 +30,7 @@ public class UtilizeActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         FragmentManager manager = getSupportFragmentManager();
-        manager.beginTransaction().replace(R.id.container, new UtilizeFragment()).commit();
+        manager.beginTransaction().replace(R.id.container, new UtilizeHomeFragment()).commit();
 
 
 
@@ -40,6 +41,28 @@ public class UtilizeActivity extends AppCompatActivity {
         binding.imgvBackHome.setOnClickListener(v -> {
             finish();
         });
+
+//        binding.utilizeChip1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                manager.beginTransaction().replace(R.id.container, new UtilizeFragment()).commit();
+//            }
+//        });
+//
+//        binding.utilizeChip2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                manager.beginTransaction().replace(R.id.container, new BenefitFragment()).commit();
+//            }
+//        });
+//
+//        binding.utilizeChip3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                manager.beginTransaction().replace(R.id.container, new BenefitFragment()).commit();
+//            }
+//        });
+
 
 //        binding.navigation.setOnItemReselectedListener(item -> {
 //            Fragment fragment = null;

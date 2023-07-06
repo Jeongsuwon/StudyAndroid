@@ -1,5 +1,6 @@
 package kr.com.hanul;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -25,8 +26,8 @@ public class CustomerController {
 	@Autowired @Qualifier("hanul") private SqlSession sql;
 	
 	@RequestMapping(value="/list.cu", produces="text/html;charset=utf-8")
-	public String list(CustomerVO vo) {
-		System.out.println("여기까지 누가 왔음");
+	public String list(CustomerVO vo, String param) {
+		System.out.println("여기까지 누가 왔음" + param);
 		List<CustomerVO> list = sql.selectList("cu.list", vo);
 		Gson gson = new Gson();
 		//Object(List, DTO등) -> String json으로 바꾸는 메소드 : toJson()
