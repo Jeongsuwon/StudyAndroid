@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".repository.RepositoryFragment"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/repository_top1"
+            />
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/repository_top2"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        >
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/repository_Grp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/repository_chip_1"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:checked="true"
+                android:text="내 리스트"
+                android:textColor="@drawable/chip_home_color"
+                app:chipBackgroundColor="#000000" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/repository_chip_2"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="좋아요"
+                android:textColor="@drawable/chip_home_color"
+                app:chipBackgroundColor="#000000"
+                app:chipIcon="@drawable/b_heart"
+                app:chipIconEnabled="true" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/repository_chip_3"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="저장한 곡"
+                android:textColor="@drawable/chip_home_color"
+                app:chipBackgroundColor="#000000" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/repository_chip_4"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="많이 들은"
+                android:textColor="@drawable/chip_home_color"
+                app:chipBackgroundColor="#000000" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/repository_chip_5"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="팔로잉"
+                android:textColor="@drawable/chip_home_color"
+                app:chipBackgroundColor="#000000" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/repository_chip_6"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="최근 감상"
+                android:textColor="@drawable/chip_home_color"
+                app:chipBackgroundColor="#000000" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/repository_chip_7"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="iPod 음악 "
+                android:textColor="@drawable/chip_home_color"
+                app:chipBackgroundColor="#000000" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

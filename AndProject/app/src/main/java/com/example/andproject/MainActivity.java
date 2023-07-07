@@ -11,6 +11,7 @@ import android.os.Bundle;
 import com.example.andproject.around.AroundFragment;
 import com.example.andproject.databinding.ActivityMainBinding;
 import com.example.andproject.home.HomeFragment;
+import com.example.andproject.repository.RepositoryFragment;
 import com.example.andproject.search.SearchFragment;
 
 
@@ -44,8 +45,9 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new SearchFragment();
                 actionBar.setTitle("검색");
             }else if(item.getItemId() == R.id.tab_repository){
-//                fragment = new RepositoryFragment();
+                fragment = new RepositoryFragment();
                 actionBar.setTitle("저장소");
+                actionBar.setIcon(R.drawable.full_foward);
             }
             manager.beginTransaction().replace(R.id.container, fragment).commit();
 

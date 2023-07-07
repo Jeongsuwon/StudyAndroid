@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import com.example.andproject.PagerAdapter;
 import com.example.andproject.R;
 import com.example.andproject.databinding.FragmentHomeBinding;
+import com.example.andproject.repository.RepositoryFragment;
 import com.google.android.material.chip.ChipGroup;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
@@ -62,11 +63,11 @@ public class HomeFragment extends Fragment {
             @Override
             public void onCheckedChanged(ChipGroup group, int checkedId) {
                 if(checkedId == R.id.today_chip_1){
-                    binding.pagerToday.setCurrentItem(1, true);
+                    binding.pagerToday.setCurrentItem(0, true);
                 }else if(checkedId == R.id.today_chip_2){
-                    binding.pagerToday.setCurrentItem(2, true);
+                    binding.pagerToday.setCurrentItem(1, true);
                 }else if(checkedId == R.id.today_chip_3){
-                    binding.pagerToday.setCurrentItem(3, true);
+                    binding.pagerToday.setCurrentItem(2, true);
                 }
             }
         });
@@ -94,6 +95,7 @@ public class HomeFragment extends Fragment {
         list.add(new TogetherFragment());
         list.add(new InternalFragment());
         list.add(new ForeignFragment());
+        list.add(new RepositoryFragment());
         return list;
     }
 

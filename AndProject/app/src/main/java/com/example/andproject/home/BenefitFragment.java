@@ -9,16 +9,26 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.andproject.R;
+import com.example.andproject.databinding.FragmentBenefitBinding;
+import com.google.android.material.navigation.NavigationView;
 
 
-public class BenefitFragment extends Fragment {
+public class BenefitFragment extends Fragment implements View.OnClickListener {
 
-
+    FragmentBenefitBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_benefit, container, false);
+        binding = FragmentBenefitBinding.inflate(inflater, container, false);
+        return binding.getRoot();
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        binding.imgvBenefit1.setOnClickListener(v1 -> {
+
+        });
     }
 }

@@ -58,7 +58,7 @@ public class CommonConn {
         onPreExcute();
 
         //옵저버 패턴 2번
-        this.callBack = callBack;
+//        this.callBack = callBack;
         RetInterface api = new RetClient().getRet().create(RetInterface.class);
         //Get방식인지 Post방식인지를 받고와서 처리도 가능하다. (현재는 어려우니까 Post로 고정시켜놓기)
         api.postRet(mapping, paramMap).enqueue(new Callback<String>() {
@@ -86,9 +86,20 @@ public class CommonConn {
 
 
     //옵저버 패턴 -> 감시하다가 어떤 작업이 끝나면 특정 메소드를 실행 : View.OnClickListener
+    //옵저버들의 목록을 객체에 등록해서 상태변화가 있을 때마다 메서드 등을 통해 객체가 직접 목록의 각 옵저버에게 알리도록 하는 디자인 패턴
+    //데이터의 변경이 발생했을 경우 상대 클래스나 객체에 의존하지 않으면서 데이터 변경을 통보하고자 할 때 유용하다
+
+
+
+
+    /*콜백함수
+      1. 다른 함수의 인자로써 이용되는 함수.
+      2. 어떤 이벤트에 의해 호출되어지는 함수.*/
+
+    //콜백 메서드란 다른 함수에 인수로 전달되는 함수이며, 이벤트 후에 실행되는 것
 
     //옵저버 패턴 1번
-    public interface JswCallBack{
+    public interface JswCallBack{ //콜백 인터페이스
         public void  onResult(boolean isResult, String data);
     }
 

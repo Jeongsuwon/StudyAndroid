@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home.BenefitFragment"
     android:background="#000000"
-    android:orientation="vertical"
+
     >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,21 +62,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="SKT 특정 요금제 및 부가서비스 사용 고객 전용 무료 혜택"
+                android:textSize="12dp"
                 android:textColor="#494D51"
                 />
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
 
             >
 
 
             <TextView
+                android:id="@+id/tv_benefit_1"
                 android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -75,14 +88,18 @@
 
                 />
             <ImageView
+                android:id="@+id/imgv_benefit1"
+                android:layout_toRightOf="@id/tv_benefit_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="3dp"
                 android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
                 android:src="@drawable/forward"
                 />
 
             <Button
+                android:layout_alignParentRight="true"
                 android:layout_marginLeft="55dp"
                 android:layout_width="60dp"
                 android:layout_height="40dp"
@@ -92,7 +109,7 @@
                 android:backgroundTint="@color/black"
                 />
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_marginHorizontal="20dp"
@@ -123,34 +140,40 @@
             android:background="@color/gray"
             />
 
-        <LinearLayout
+        <RelativeLayout
+            android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
 
             >
 
 
             <TextView
+                android:id="@+id/tv_benefit_2"
                 android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SKT 요금제 무제한 혜택"
+                android:text="FLO 앤 데이터(플러스)"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 android:textSize="18dp"
+
                 />
             <ImageView
+                android:id="@+id/imgv_benefit2"
+                android:layout_toRightOf="@id/tv_benefit_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="3dp"
                 android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
                 android:src="@drawable/forward"
                 />
 
             <Button
-                android:layout_marginLeft="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="55dp"
                 android:layout_width="60dp"
                 android:layout_height="40dp"
                 android:text="발급"
@@ -159,7 +182,7 @@
                 android:backgroundTint="@color/black"
                 />
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_marginHorizontal="20dp"
@@ -190,34 +213,40 @@
             android:background="@color/gray"
             />
 
-        <LinearLayout
+        <RelativeLayout
+            android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
 
             >
 
 
             <TextView
+                android:id="@+id/tv_benefit_3"
                 android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="기본 요금제 100회 혜택"
+                android:text="FLO 앤 데이터(플러스)"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 android:textSize="18dp"
+
                 />
             <ImageView
+                android:id="@+id/imgv_benefit3"
+                android:layout_toRightOf="@id/tv_benefit_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="3dp"
                 android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
                 android:src="@drawable/forward"
                 />
 
             <Button
-                android:layout_marginLeft="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="55dp"
                 android:layout_width="60dp"
                 android:layout_height="40dp"
                 android:text="발급"
@@ -226,7 +255,7 @@
                 android:backgroundTint="@color/black"
                 />
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_marginHorizontal="20dp"
@@ -254,14 +283,27 @@
 
 
     </LinearLayout>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
 
         <ImageView
+            android:id="@+id/imgv_t_info1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/t_info" />
+            android:src="@drawable/t_info4" />
+
+        <ImageView
+            android:layout_below="@id/imgv_t_info1"
+            android:id="@+id/imgv_t_info3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/t_info2" />
+
+    </RelativeLayout>
     </LinearLayout>
-</LinearLayout>
+
+    </ScrollView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
