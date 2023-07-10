@@ -29,6 +29,7 @@ public class CommonConn {
         this.context = context;
         this.mapping = mapping;
         this.paramMap = new HashMap<>();
+        Log.d("콜백", "onCreate: 콜백(인터페이스의 메모리): " + callBack);
     }
 
     public void addParamMap(String key, Object value){
@@ -56,9 +57,10 @@ public class CommonConn {
     //실제 enque가 되어야 하는 부분 (파라미터 등을 이용해서 실제로 Spring에 전송한다.)↑
     public void onExcute(JswCallBack callBack){
         onPreExcute();
-
+        Log.d("콜백", "onCreate: 콜백(인터페이스의 메모리): " + this.callBack);
         //옵저버 패턴 2번
-//        this.callBack = callBack;
+        this.callBack = callBack;
+        Log.d("콜백", "onCreate: 콜백(인터페이스의 메모리): " + this.callBack + "받아온 것 =>" + callBack);
         RetInterface api = new RetClient().getRet().create(RetInterface.class);
         //Get방식인지 Post방식인지를 받고와서 처리도 가능하다. (현재는 어려우니까 Post로 고정시켜놓기)
         api.postRet(mapping, paramMap).enqueue(new Callback<String>() {

@@ -31,6 +31,7 @@ public class UtilizeHomeFragment extends Fragment {
 
 
         binding.chipGrpUtilize.setOnCheckedChangeListener(new ChipGroup.OnCheckedChangeListener() {
+
             @Override
             public void onCheckedChanged(ChipGroup group, int checkedId) {
                 if(checkedId == R.id.utilize_chip_1){
@@ -64,6 +65,7 @@ public class UtilizeHomeFragment extends Fragment {
         ArrayList<Fragment> list = new ArrayList<>();
         list.add(new UtilizeFragment());
         list.add(new BenefitFragment());
+        list.add(new UtilizeMyFragment());
 
         return list;
     }

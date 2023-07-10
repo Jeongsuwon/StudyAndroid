@@ -13,7 +13,7 @@ import com.example.andproject.databinding.FragmentBenefitBinding;
 import com.google.android.material.navigation.NavigationView;
 
 
-public class BenefitFragment extends Fragment implements View.OnClickListener {
+public class BenefitFragment extends Fragment{
 
     FragmentBenefitBinding binding;
 
@@ -25,10 +25,7 @@ public class BenefitFragment extends Fragment implements View.OnClickListener {
 
     }
 
-    @Override
-    public void onClick(View v) {
-        binding.imgvBenefit1.setOnClickListener(v1 -> {
 
-        });
-    }
+
+
 }

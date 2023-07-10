@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#212226"
+    android:orientation="vertical"
+    android:layout_marginVertical="20dp"
+    android:paddingVertical="20dp"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/tv_complete_title"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="무제한 듣기 T멤버십"
+            android:textColor="@color/white"
+            />
+
+        <ImageView
+            android:id="@+id/imgv_complete_forward"
+            android:layout_marginTop="3dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/forward"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:id="@+id/use_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사용완료"
+            android:textColor="@color/graywhite"
+            android:layout_gravity="center"
+            android:layout_marginLeft="70dp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/tv_period"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/graywhite"
+        android:text="사용기간 2023-07-12 ~ 2023-08-12"
+        />
+    <TextView
+        android:id="@+id/tv_flo"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/graywhite"
+        android:text="구매출처 FLO"
+        />
+    <TextView
+        android:id="@+id/tv_payment_setting"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/graywhite"
+        android:text="결제설정 정기결제"
+        />
+    <TextView
+        android:id="@+id/tv_payment_means"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/graywhite"
+        android:text="결제수단 휴대폰(SKT)"
+        />
+
+</LinearLayout>

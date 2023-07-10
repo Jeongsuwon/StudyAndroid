@@ -24,22 +24,40 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
 
+        CommonConn.JswCallBack callBack = new CommonConn.JswCallBack() {
+            @Override
+            public void onResult(boolean isResult, String data) {
+                Log.d("결과", "onResult: " + data);
+            }
+        };
+
+        Log.d("콜백", "onCreate: 콜백(인터페이스의 메모리): " + callBack);
+
 
         binding.btnLogin.setOnClickListener(v -> {
             CommonConn conn = new CommonConn(this, "member/login");
             conn.addParamMap("id", binding.edtId.getText().toString());
             conn.addParamMap("pw", binding.edtPw.getText().toString());
-            conn.onExcute(new CommonConn.JswCallBack() {
-                @Override
-                public void onResult(boolean isResult, String data) {
-
-                }
-            }); // onExcute 메소드가 실행되면 일단 Spring으로 전송처리는 정상적으로 작동한다. (결과를 가져오려면 어떻게?)
+            conn.onExcute(callBack); // onExcute 메소드가 실행되면 일단 Spring으로 전송처리는 정상적으로 작동한다. (결과를 가져오려면 어떻게?)
 
         });
+
+        TestVO vo = new TestVO();
+        vo.str="111";
+        testMethod(vo);
+        Log.d("str", "onCreate: " + vo.str);
+
+        callBack.onResult(true, "값을 넘김");
+
     }
 
 
+    public class TestVO{
+        String str;
+    }
 
+    public  void testMethod(TestVO vo){
+        vo.str="222";
+    }
 
 }
