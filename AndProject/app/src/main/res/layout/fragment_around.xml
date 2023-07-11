@@ -9,6 +9,7 @@
     android:orientation="vertical">
 
 
+
     <com.google.android.material.chip.ChipGroup
         android:layout_marginLeft="20dp"
         android:id="@+id/chip_grp"
@@ -82,4 +83,5 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         />
+
 </LinearLayout>
