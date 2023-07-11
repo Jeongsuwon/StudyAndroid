@@ -53,8 +53,11 @@ public class HomeFragment extends Fragment {
             startActivity(intent);
         });
 
-        PagerAdapter adapter = new PagerAdapter(this, getFragmentList());
+      //  PagerAdapter adapter = new PagerAdapter(this, getFragmentList());\
+        HomeAdapter adapter = new HomeAdapter(getTogether(), getContext());
         binding.pagerToday.setAdapter(adapter);
+        binding.pagerToday.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
+       // binding.pagerToday.setAdapter(adapter);
 
 
 
@@ -63,39 +66,97 @@ public class HomeFragment extends Fragment {
             @Override
             public void onCheckedChanged(ChipGroup group, int checkedId) {
                 if(checkedId == R.id.today_chip_1){
-                    binding.pagerToday.setCurrentItem(0, true);
+                    adapter.list = getTogether();
+                    adapter.notifyDataSetChanged();
+                   // binding.pagerToday.setAdapter(new HomeAdapter(getTogether(), getContext()));
+                   // binding.pagerToday.setCurrentItem(0, true);
                 }else if(checkedId == R.id.today_chip_2){
-                    binding.pagerToday.setCurrentItem(1, true);
+                    adapter.list = getIntenal();
+                    adapter.notifyDataSetChanged();
+                 //  binding.pagerToday.setAdapter(new HomeAdapter(getIntenal(), g
+                   // binding.pagerToday.setCurrentItem(1, true);
                 }else if(checkedId == R.id.today_chip_3){
-                    binding.pagerToday.setCurrentItem(2, true);
+                    adapter.list = getForeign();
+                    adapter.notifyDataSetChanged();
+
+                  //  binding.pagerToday.setAdapter(new HomeAdapter(getForeign(), getContext()));
+                   // binding.pagerToday.setCurrentItem(2, true);
                 }
+                binding.pagerToday.smoothScrollToPosition(0);
             }
         });
 
-        binding.pagerToday.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                if(position==0){
-                    binding.chipGrpToday.check(R.id.today_chip_1);
-                }else if(position==1){
-                    binding.chipGrpToday.check(R.id.today_chip_2);
-                }
-                else if(position==2){
-                    binding.chipGrpToday.check(R.id.today_chip_3);
-                }
-
-            }
-        });
+//        binding.pagerToday.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+//            @Override
+//            public void onPageSelected(int position) {
+////                if(position==0){
+////                    binding.chipGrpToday.check(R.id.today_chip_1);
+////                }else if(position==1){
+////                    binding.chipGrpToday.check(R.id.today_chip_2);
+////                }
+////                else if(position==2){
+////                    binding.chipGrpToday.check(R.id.today_chip_3);
+////                }
+//
+//            }
+//        });
 
         return binding.getRoot();
     }
 
+    public ArrayList<HomeCateDTO> getForeign(){
+        ArrayList<HomeCateDTO> list = new ArrayList<>();
+
+        list.add(new HomeCateDTO(R.drawable.today_img1, R.drawable.full_foward, "That's Me", "선예"));
+        list.add(new HomeCateDTO(R.drawable.together_img1, R.drawable.full_foward, "책갈피", "유별"));
+        list.add(new HomeCateDTO(R.drawable.together_img2, R.drawable.full_foward, "안녕한가요", "이세연"));
+        list.add(new HomeCateDTO(R.drawable.together_img3, R.drawable.full_foward, "우산", "이찬혁비디오"));
+        list.add(new HomeCateDTO(R.drawable.together_img4, R.drawable.full_foward, "PLAY LIST", "유키스"));
+        list.add(new HomeCateDTO(R.drawable.together_img5, R.drawable.full_foward, "Her", "coldnight"));
+        list.add(new HomeCateDTO(R.drawable.today_img6, R.drawable.full_foward, "Fluid", "NECTA"));
+        list.add(new HomeCateDTO(R.drawable.today_img8, R.drawable.full_foward, "앞으로가", "SONIC STONES(소닉스톤···"));
+        list.add(new HomeCateDTO(R.drawable.today_img9, R.drawable.full_foward, "착지", "정지아"));
+        list.add(new HomeCateDTO(R.drawable.today_img10, R.drawable.full_foward, "트랄랄라 브라더스", "various Artists"));
+
+        return list;
+    }
+
+    public ArrayList<HomeCateDTO> getIntenal(){
+        ArrayList<HomeCateDTO> list = new ArrayList<>();
+
+        list.add(new HomeCateDTO(R.drawable.foreign_img1, R.drawable.full_foward, "SWINE", "Demi Lovato"));
+        list.add(new HomeCateDTO(R.drawable.foreign_img2, R.drawable.full_foward, "The Good Witch", "Maisie Peters"));
+        list.add(new HomeCateDTO(R.drawable.foreign_img3, R.drawable.full_foward, "Coming", "Around Again"));
+        list.add(new HomeCateDTO(R.drawable.foreign_img4, R.drawable.full_foward, "Lay Your Hands Upon My Heart", "Rosa Linn"));
+        list.add(new HomeCateDTO(R.drawable.foreign_img5, R.drawable.full_foward, "BEACH BALL", "Busta Rhymes & BIA"));
+        list.add(new HomeCateDTO(R.drawable.foreign_img6, R.drawable.full_foward, "Point Your Finger", "Trousdale"));
+        list.add(new HomeCateDTO(R.drawable.foreign_img7, R.drawable.full_foward, "Without you", "Diplo & Elle King"));
+        list.add(new HomeCateDTO(R.drawable.foreign_img8, R.drawable.full_foward, "Chris Black Changed My Life", "Porutgal. The man"));
+
+
+        return list;
+    }
+    public ArrayList<HomeCateDTO> getTogether(){
+        ArrayList<HomeCateDTO> list = new ArrayList<>();
+
+        list.add(new HomeCateDTO(R.drawable.today_img1, R.drawable.full_foward, "That's Me", "선예"));
+        list.add(new HomeCateDTO(R.drawable.together_img1, R.drawable.full_foward, "책갈피", "유별"));
+        list.add(new HomeCateDTO(R.drawable.together_img2, R.drawable.full_foward, "안녕한가요", "이세연"));
+        list.add(new HomeCateDTO(R.drawable.together_img3, R.drawable.full_foward, "우산", "이찬혁비디오"));
+        list.add(new HomeCateDTO(R.drawable.together_img4, R.drawable.full_foward, "PLAY LIST", "유키스"));
+        list.add(new HomeCateDTO(R.drawable.together_img5, R.drawable.full_foward, "Her", "coldnight"));
+        list.add(new HomeCateDTO(R.drawable.today_img6, R.drawable.full_foward, "Fluid", "NECTA"));
+        list.add(new HomeCateDTO(R.drawable.today_img8, R.drawable.full_foward, "앞으로가", "SONIC STONES(소닉스톤···"));
+        list.add(new HomeCateDTO(R.drawable.today_img9, R.drawable.full_foward, "착지", "정지아"));
+        list.add(new HomeCateDTO(R.drawable.today_img10, R.drawable.full_foward, "트랄랄라 브라더스", "various Artists"));
+
+        return list;
+    }
     ArrayList<Fragment> getFragmentList(){
         ArrayList<Fragment> list = new ArrayList<>();
         list.add(new TogetherFragment());
         list.add(new InternalFragment());
         list.add(new ForeignFragment());
-        list.add(new RepositoryFragment());
         return list;
     }
 

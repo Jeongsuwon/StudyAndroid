@@ -8,16 +8,30 @@
     android:background="#18191B"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.SearchView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        iconifiedByDefault="false"
-        android:layout_marginTop="10dp"
-        android:layout_marginHorizontal="20dp"
 
-        app:queryHint="검색어를 입력하세요"
-        app:searchHintIcon="@color/white"
-        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField"
+        android:layout_width="match_parent"
+        app:startIconDrawable="@drawable/search"
+        android:layout_height="wrap_content"
+        app:startIconTint="#B8B8B8"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:textColorHint="#B8B8B8"
+        app:boxStrokeColor="@drawable/selector_textinputlayout"
+        app:boxStrokeErrorColor="#B8B8B8"
+        app:boxBackgroundColor="#18191B"
+        android:hint="검색어를 입력하세요">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:textColor="#B8B8B8"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

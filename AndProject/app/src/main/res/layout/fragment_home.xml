@@ -209,7 +209,7 @@
                     />
             </com.google.android.material.chip.ChipGroup>
         </LinearLayout>
-        <androidx.viewpager2.widget.ViewPager2
+        <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"

@@ -18,6 +18,7 @@ public class PagerAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int i) {
+
         return list.get(i);
     }
 

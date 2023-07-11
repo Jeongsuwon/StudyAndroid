@@ -319,7 +319,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="370dp"
                 android:background="@drawable/recv_radius"
-                android:id="@+id/recv_flo_chart"
+                android:id="@+id/recv_v_chart"
                 >
 
             </androidx.recyclerview.widget.RecyclerView>
