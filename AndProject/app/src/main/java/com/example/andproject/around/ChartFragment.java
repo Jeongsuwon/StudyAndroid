@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.andproject.R;
 import com.example.andproject.databinding.FragmentChartBinding;
+import com.example.andproject.home.GenreDTO;
 
 import java.util.ArrayList;
 
@@ -25,6 +26,9 @@ public class ChartFragment extends Fragment {
         binding = FragmentChartBinding.inflate(inflater, container, false);
         binding.recvFloChart.setAdapter(new FloChartAdapter(getContext(), getFloChart()));
         binding.recvFloChart.setLayoutManager(new LinearLayoutManager(getContext()));
+
+
+
 
         return binding.getRoot();
     }
@@ -59,5 +63,26 @@ public class ChartFragment extends Fragment {
     }
 
 
-
+    public ArrayList<GenreDTO> genre(){
+        ArrayList<GenreDTO> list = new ArrayList<>();
+        list.add(new GenreDTO(R.drawable.around_genre1));
+        list.add(new GenreDTO(R.drawable.around_genre2));
+        list.add(new GenreDTO(R.drawable.around_genre3));
+        list.add(new GenreDTO(R.drawable.around_genre4));
+        list.add(new GenreDTO(R.drawable.around_genre5));
+        list.add(new GenreDTO(R.drawable.around_genre6));
+        list.add(new GenreDTO(R.drawable.around_genre7));
+        list.add(new GenreDTO(R.drawable.around_genre8));
+        list.add(new GenreDTO(R.drawable.around_genre9));
+        list.add(new GenreDTO(R.drawable.around_genre10));
+        list.add(new GenreDTO(R.drawable.around_genre11));
+        list.add(new GenreDTO(R.drawable.around_genre12));
+        list.add(new GenreDTO(R.drawable.around_genre13));
+        list.add(new GenreDTO(R.drawable.around_genre14));
+        list.add(new GenreDTO(R.drawable.around_genre15));
+        list.add(new GenreDTO(R.drawable.around_genre16));
+        list.add(new GenreDTO(R.drawable.around_genre17));
+        list.add(new GenreDTO(R.drawable.around_genre18));
+        return list;
+    }
 }

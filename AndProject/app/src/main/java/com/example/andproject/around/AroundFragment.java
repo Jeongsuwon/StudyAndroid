@@ -32,6 +32,7 @@ public class AroundFragment extends Fragment {
             public void onCheckedChanged(ChipGroup group, int checkedId) {
                 if(checkedId == R.id.around_chip_1){
                     binding.pager.setCurrentItem(1, true);
+
                 }
             }
         });
