@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.NotifyActivity"
+    android:orientation="vertical"
+    android:background="#0F0D0E"
+    >
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/imgv_notice_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_left"
+            />
+        <TextView
+            android:gravity="center"
+            android:layout_marginRight="30dp"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="알림함"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_notice1"
+            android:textColor="@color/graywhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="좋아하는 아티스트 소식을 받고싶다면?"
+            />
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_below="@+id/tv_notice1"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_notice2"
+            android:textColor="@color/graywhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="광고 수신 동의 설정을 변경해주세요."
+            />
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv_notice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/notice_set"
+            />
+
+
+    </RelativeLayout>
+</LinearLayout>

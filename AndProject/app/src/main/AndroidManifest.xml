@@ -13,6 +13,12 @@
         android:theme="@style/Theme.AndProject"
         tools:targetApi="31">
         <activity
+            android:name=".home.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.NotifyActivity"
+            android:exported="false" />
+        <activity
             android:name=".home.UtilizeCompleteActivity"
             android:exported="false" />
         <activity

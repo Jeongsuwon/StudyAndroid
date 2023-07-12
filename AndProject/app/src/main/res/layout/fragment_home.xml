@@ -25,7 +25,16 @@
         android:orientation="vertical"
         android:layout_weight="1"
         android:background="@drawable/recmd1"
+
         >
+<!--        <ViewFlipper
+            android:id="@+id/vf_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/recmd1"
+            >-->
+
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,20 +74,22 @@
                 android:src="@drawable/settings"
                 />
         </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            >
-            <ImageView
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="60dp"
-                android:layout_centerVertical="true"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/play"
-                />
-        </RelativeLayout>
+                android:layout_weight="1"
+                >
+                <ImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/play"
+                    />
+            </RelativeLayout>
+<!--        </ViewFlipper>-->
+
 
     </LinearLayout>
 
@@ -549,6 +560,71 @@
         </LinearLayout>
         </HorizontalScrollView>
 
+
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_foot_banner1"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_social"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:textSize="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="(주)드림어스컴퍼니 사업자 정보"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/forward"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:textSize="7dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DREAMUS.CO.,LET."
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
 

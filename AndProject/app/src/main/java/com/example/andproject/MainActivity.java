@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             }else if(item.getItemId() == R.id.tab_search){
                 fragment = new SearchFragment();
                 actionBar.setTitle("검색");
+                actionBar.setIcon(R.drawable.search_mike1);
             }else if(item.getItemId() == R.id.tab_repository){
                 fragment = new RepositoryFragment();
                 actionBar.setTitle("저장소");
