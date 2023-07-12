@@ -60,6 +60,7 @@
             android:text="광고 수신 동의 설정을 변경해주세요."
             />
         <ImageView
+            android:id="@+id/imgv_notice_set"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/tv_notice2"
             android:layout_width="wrap_content"
