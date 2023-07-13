@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:background="#7794B1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름"
+        />
+
+    <TextView
+        android:layout_toRightOf="@id/tv_name"
+        android:id="@+id/tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(사번)"
+        />
+
+    <TextView
+        android:layout_below="@id/tv_name"
+        android:id="@+id/tv_dname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="부서명"
+        />
+
+    <TextView
+        android:layout_below="@id/tv_dname"
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이메일"
+        />
+
+    <ImageView
+        android:id="@+id/imgv_hr_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_alignParentRight="true"
+        />
+    </RelativeLayout>
+</LinearLayout>

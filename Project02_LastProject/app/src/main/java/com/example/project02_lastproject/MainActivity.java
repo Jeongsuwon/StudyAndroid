@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import com.example.project02_lastproject.customer.CustomerFragment;
 import com.example.project02_lastproject.databinding.ActivityMainBinding;
+import com.example.project02_lastproject.hr.HrFragment;
 
 import me.ibrahimsn.lib.OnItemReselectedListener;
 import me.ibrahimsn.lib.OnItemSelectedListener;
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 if(i==0){
                     fragment = new CustomerFragment();
                 }else if(i==1){
-
+                    fragment = new HrFragment();
                 }else if(i==2){
 
                 }else if(i==3){
