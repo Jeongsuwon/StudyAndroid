@@ -15,5 +15,9 @@ public class SettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySettingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        binding.imgvSetBack.setOnClickListener(view -> {
+            finish();
+        });
     }
 }

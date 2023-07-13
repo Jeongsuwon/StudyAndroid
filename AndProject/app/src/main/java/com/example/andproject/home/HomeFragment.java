@@ -1,5 +1,7 @@
 package com.example.andproject.home;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -10,9 +12,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.andproject.PagerAdapter;
 import com.example.andproject.R;
@@ -46,7 +50,30 @@ public class HomeFragment extends Fragment {
         binding.recvSummer.setAdapter(new HomeAdapter(getHome_summer(), getContext()));
         binding.recvSummer.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL, false));
 
+        binding.imgvHomeMike.setOnClickListener(view -> {
+            AlertDialog.Builder oDialog = new AlertDialog.Builder(getContext(),
+                    android.R.style.Theme_Dialog);
 
+            oDialog.setMessage("음성인식,음악검색 기능을 사용하기 위해 마이크 권한이 필요합니다. 설정>FLO에서 마이크 권한을 허용해주세요.")
+                    .setPositiveButton("아니오", new DialogInterface.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which)
+                        {
+                            Log.i("Dialog", "취소");
+                        }
+                    })
+                    .setNeutralButton("설정으로 이동", new DialogInterface.OnClickListener()
+                    {
+                        public void onClick(DialogInterface dialog, int which)
+                        {
+                        }
+                    })
+                    .setCancelable(false) // 백버튼으로 팝업창이 닫히지 않도록 한다.
+
+
+                    .show();
+        });
 
         binding.imgvUtilize.setOnClickListener(v -> {
             Intent intent = new Intent(getContext(), UtilizeActivity.class);

@@ -50,6 +50,7 @@
                 />
 
             <ImageView
+                android:id="@+id/imgv_home_mike"
                 android:layout_toLeftOf="@id/imgv_notify"
                 android:layout_marginTop="30dp"
                 android:layout_width="30dp"
