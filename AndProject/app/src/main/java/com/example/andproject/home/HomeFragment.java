@@ -5,28 +5,18 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
-import com.example.andproject.PagerAdapter;
 import com.example.andproject.R;
 import com.example.andproject.databinding.FragmentHomeBinding;
-import com.example.andproject.repository.RepositoryFragment;
 import com.google.android.material.chip.ChipGroup;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.options.IFramePlayerOptions;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
 import java.util.ArrayList;
 
@@ -89,6 +79,12 @@ public class HomeFragment extends Fragment {
             Intent intent = new Intent(getContext(), SettingActivity.class);
             startActivity(intent);
         });
+
+        binding.imgvFavor.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext(), FavorActivity.class);
+            startActivity(intent);
+        });
+
 
       //  PagerAdapter adapter = new PagerAdapter(this, getFragmentList());\
         HomeAdapter adapter = new HomeAdapter(getTogether(), getContext());
