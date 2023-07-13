@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.example.andproject.databinding.ActivitySplashBinding;
+import com.example.andproject.home.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -29,7 +30,7 @@ public class SplashActivity extends AppCompatActivity {
 
         new Handler().postDelayed(()->{
             dialog.dismiss();
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
             finish();
         }, 1000 * 3);
