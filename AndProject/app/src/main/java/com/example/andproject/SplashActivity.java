@@ -30,7 +30,7 @@ public class SplashActivity extends AppCompatActivity {
 
         new Handler().postDelayed(()->{
             dialog.dismiss();
-            Intent intent = new Intent(this, LoginActivity.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
         }, 1000 * 3);
