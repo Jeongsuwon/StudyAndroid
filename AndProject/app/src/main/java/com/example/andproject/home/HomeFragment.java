@@ -29,7 +29,7 @@ public class HomeFragment extends Fragment {
     FragmentHomeBinding binding;
     private Handler sliderHandler = new Handler();
 
-
+    int currentPage = 0;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -162,6 +162,10 @@ public class HomeFragment extends Fragment {
         @Override
         public void run() {
             binding.imageSlide.setCurrentItem(binding.imageSlide.getCurrentItem() + 1);
+            if(currentPage == 5) {
+                currentPage = 0;
+            }
+            binding.imageSlide.setCurrentItem(currentPage++, true);
         }
     };
 
