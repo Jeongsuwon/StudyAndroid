@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".around.MovieActivity"
+    android:background="@color/floback"
+
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        >
+
+
+
+    <RelativeLayout
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <ImageView
+        android:id="@+id/around_movie_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/around_movie_info"
+        />
+
+        <ImageView
+            android:id="@+id/around_movieinfo_down"
+            android:layout_alignParentRight="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/arrow_down"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginVertical="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            app:autoPlay="false"
+            app:videoId="QU9c0053UAU"
+            />
+
+    </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+    <RelativeLayout
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/around_movie_info_colorRing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/around_movie_info_colorring"
+            />
+
+        <ImageView
+            android:layout_marginTop="12dp"
+            android:id="@+id/around_movie_info_menu"
+            android:layout_alignParentRight="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/around_movie_info_menu"
+            />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[MV]Seven(feat.Latto)"
+            android:textColor="@color/main_color"
+            android:textSize="20dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+        <TextView
+            android:id="@+id/tv_jeongkuk"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="정국"
+            android:textColor="@color/main_color"
+            android:textSize="15dp"
+            />
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/tv_jeongkuk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/forward"
+                />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/around_movie_info_notlike"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/around_movie_info_notlike"
+                android:visibility="visible"
+            />
+
+            <ImageView
+                android:id="@+id/around_movie_info_like"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/around_movie_info_like"
+                android:visibility="invisible"
+                />
+
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+            <SlidingDrawer
+                android:id="@+id/slidingdrawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:content="@+id/content"
+                android:handle="@+id/handle"
+                android:orientation="vertical"
+                android:allowSingleTap="true"
+                android:animateOnClick="true"
+                >
+                <FrameLayout
+                    android:id="@+id/handle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                <ImageView
+                    android:id="@+id/arrow_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:src="@drawable/arrow_up"
+                    android:visibility="visible"
+
+                    />
+
+                    <ImageView
+                        android:id="@+id/arrow_down"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@drawable/arrow_down"
+                        android:visibility="invisible"
+                        />
+
+                </FrameLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="다음영상"
+                        android:textColor="@color/main_color"
+                        android:textSize="15dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        />
+
+
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/material_switch"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="자동재생"
+                        android:textSize="12dp"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/graywhite"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    </RelativeLayout>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recv_movie_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </LinearLayout>
+
+                    </ScrollView>
+                </LinearLayout>
+
+
+            </SlidingDrawer>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

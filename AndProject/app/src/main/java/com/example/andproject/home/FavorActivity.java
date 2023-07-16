@@ -1,5 +1,6 @@
 package com.example.andproject.home;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,7 +13,7 @@ import com.example.andproject.databinding.ActivityFavorBinding;
 import java.util.ArrayList;
 
 public class FavorActivity extends AppCompatActivity {
-
+    ActionBar actionBar;
     ActivityFavorBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,9 @@ public class FavorActivity extends AppCompatActivity {
         binding.imgvFaverBack.setOnClickListener(v -> {
             finish();
         });
+
+        actionBar = getSupportActionBar();
+        actionBar.hide();
     }
 
   public ArrayList<FavorDTO> list(){

@@ -26,6 +26,9 @@ public class UtilizeCompleteActivity extends AppCompatActivity {
         binding.btnCompleteClose.setOnClickListener(view -> {
             finish();
         });
+
+        actionBar = getSupportActionBar();
+        actionBar.hide();
     }
 
     public ArrayList<CompleteDTO> complete(){

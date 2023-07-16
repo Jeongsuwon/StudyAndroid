@@ -3,12 +3,15 @@ package com.example.andproject.home;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +27,8 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
 
     FragmentHomeBinding binding;
+    private Handler sliderHandler = new Handler();
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,6 +44,15 @@ public class HomeFragment extends Fragment {
 
         binding.recvSummer.setAdapter(new HomeAdapter(getHome_summer(), getContext()));
         binding.recvSummer.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL, false));
+
+        binding.imageSlide.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                sliderHandler.removeCallbacks(sliderRunnable);
+                sliderHandler.postDelayed(sliderRunnable, 4000);
+            }
+        });
 
         binding.imgvHomeMike.setOnClickListener(view -> {
             AlertDialog.Builder oDialog = new AlertDialog.Builder(getContext(),
@@ -86,11 +100,15 @@ public class HomeFragment extends Fragment {
         });
 
 
-      //  PagerAdapter adapter = new PagerAdapter(this, getFragmentList());\
         HomeAdapter adapter = new HomeAdapter(getTogether(), getContext());
         binding.pagerToday.setAdapter(adapter);
         binding.pagerToday.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
-       // binding.pagerToday.setAdapter(adapter);
+
+//        SliderAdapter adapter1 = new SliderAdapter(getContext(), getHomeMain());
+//        binding.recvHomeMain.setAdapter(adapter1);
+//        binding.recvHomeMain.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
+
+        binding.imageSlide.setAdapter(new SliderAdapter(getContext(), getHomeMain()));
 
 
 
@@ -101,40 +119,62 @@ public class HomeFragment extends Fragment {
                 if(checkedId == R.id.today_chip_1){
                     adapter.list = getTogether();
                     adapter.notifyDataSetChanged();
-                   // binding.pagerToday.setAdapter(new HomeAdapter(getTogether(), getContext()));
-                   // binding.pagerToday.setCurrentItem(0, true);
                 }else if(checkedId == R.id.today_chip_2){
                     adapter.list = getIntenal();
                     adapter.notifyDataSetChanged();
-                 //  binding.pagerToday.setAdapter(new HomeAdapter(getIntenal(), g
-                   // binding.pagerToday.setCurrentItem(1, true);
                 }else if(checkedId == R.id.today_chip_3){
                     adapter.list = getForeign();
                     adapter.notifyDataSetChanged();
 
-                  //  binding.pagerToday.setAdapter(new HomeAdapter(getForeign(), getContext()));
-                   // binding.pagerToday.setCurrentItem(2, true);
                 }
                 binding.pagerToday.smoothScrollToPosition(0);
             }
         });
 
-//        binding.pagerToday.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-//            @Override
-//            public void onPageSelected(int position) {
-////                if(position==0){
-////                    binding.chipGrpToday.check(R.id.today_chip_1);
-////                }else if(position==1){
-////                    binding.chipGrpToday.check(R.id.today_chip_2);
-////                }
-////                else if(position==2){
-////                    binding.chipGrpToday.check(R.id.today_chip_3);
-////                }
-//
-//            }
-//        });
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        binding.imgvFacebook.setOnClickListener(view -> {
+            intent.setData(Uri.parse("https://m.facebook.com")); //  -> /music.flo.official
+            startActivity(intent);
+        });
+
+        binding.imgvInsta.setOnClickListener(view -> {
+            intent.setData(Uri.parse("https://www.instagram.com/flo.music.official/?igshid=t5zfyar4ceeu")); //  -> /music.flo.official
+            startActivity(intent);
+        });
+
+        binding.imgvYoutube.setOnClickListener(view -> {
+            intent.setData(Uri.parse("https://www.youtube.com/@studioflo")); //  -> /music.flo.official
+            startActivity(intent);
+        });
+
+        binding.imgvTwitter.setOnClickListener(view -> {
+            intent.setData(Uri.parse("https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Dko")); //  -> /music.flo.official
+            startActivity(intent);
+        });
+
+
+
 
         return binding.getRoot();
+    }
+
+    private Runnable sliderRunnable = new Runnable() {
+        @Override
+        public void run() {
+            binding.imageSlide.setCurrentItem(binding.imageSlide.getCurrentItem() + 1);
+        }
+    };
+
+    public ArrayList<HomeMainDTO> getHomeMain(){
+        ArrayList<HomeMainDTO> list = new ArrayList<>();
+        list.add(new HomeMainDTO(R.drawable.recmd1, R.drawable.home_main_subimg1, R.drawable.home_main_subimg2, R.drawable.home_main_subimg3));
+        list.add(new HomeMainDTO(R.drawable.recmd2, R.drawable.home_main_subimg1, R.drawable.home_main_subimg2, R.drawable.home_main_subimg3));
+        list.add(new HomeMainDTO(R.drawable.recmd3, R.drawable.home_main_subimg1, R.drawable.home_main_subimg2, R.drawable.home_main_subimg3));
+        list.add(new HomeMainDTO(R.drawable.recmd4, R.drawable.home_main_subimg1, R.drawable.home_main_subimg2, R.drawable.home_main_subimg3));
+        list.add(new HomeMainDTO(R.drawable.recmd5, R.drawable.home_main_subimg1, R.drawable.home_main_subimg2, R.drawable.home_main_subimg3));
+
+
+        return list;
     }
 
     public ArrayList<HomeCateDTO> getForeign(){

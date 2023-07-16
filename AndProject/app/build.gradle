@@ -59,5 +59,11 @@ dependencies {
 // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-scalars
     implementation group: 'com.squareup.retrofit2', name: 'converter-scalars', version: '2.9.0'
 
+    implementation 'com.github.Spikeysanju:MotionToast:1.4'
+
+    implementation 'com.github.hannesa2:AndroidSlidingUpPanel:4.2.1'
+
+
+
 
 }

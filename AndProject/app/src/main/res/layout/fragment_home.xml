@@ -18,81 +18,77 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
-    <LinearLayout
-        android:id="@+id/imgv_back_home"
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:background="@drawable/recmd1"
-
+        android:layout_height="wrap_content"
         >
-<!--        <ViewFlipper
-            android:id="@+id/vf_home"
+
+
+        <androidx.viewpager2.widget.ViewPager2
             android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:id="@+id/image_slide"
+            />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/imgv_utilize"
+            android:background="#AEC5CB"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:src="@drawable/utilize"
+            />
+
+        <ImageView
+            android:id="@+id/imgv_home_mike"
+            android:layout_toLeftOf="@id/imgv_notify"
+            android:layout_marginTop="30dp"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:src="@drawable/mic"
+            />
+        <ImageView
+            android:id="@+id/imgv_notify"
+            android:layout_marginTop="30dp"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:src="@drawable/notifications"
+            android:layout_toLeftOf="@id/imgv_set"
+            />
+        <ImageView
+            android:id="@+id/imgv_set"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:src="@drawable/settings"
+            />
+    </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imgv_home_mainPlay"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/recmd1"
-            >-->
+            android:src="@drawable/play"
+            />
 
+    </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-            <ImageView
-                android:id="@+id/imgv_utilize"
-                android:background="#AEC5CB"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="40dp"
-                android:layout_width="50dp"
-                android:layout_height="30dp"
-                android:src="@drawable/utilize"
-                />
+<!--   <androidx.recyclerview.widget.RecyclerView-->
+<!--       android:layout_width="match_parent"-->
+<!--       android:layout_height="350dp"-->
+<!--       android:id="@+id/recv_home_main"-->
+<!--       />-->
 
-            <ImageView
-                android:id="@+id/imgv_home_mike"
-                android:layout_toLeftOf="@id/imgv_notify"
-                android:layout_marginTop="30dp"
-                android:layout_width="30dp"
-                android:layout_height="25dp"
-                android:src="@drawable/mic"
-                />
-            <ImageView
-                android:id="@+id/imgv_notify"
-                android:layout_marginTop="30dp"
-                android:layout_width="30dp"
-                android:layout_height="25dp"
-                android:src="@drawable/notifications"
-                android:layout_toLeftOf="@id/imgv_set"
-                />
-            <ImageView
-                android:id="@+id/imgv_set"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="50dp"
-                android:layout_marginTop="30dp"
-                android:layout_width="30dp"
-                android:layout_height="25dp"
-                android:src="@drawable/settings"
-                />
-        </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                >
-                <ImageView
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="60dp"
-                    android:layout_centerVertical="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/play"
-                    />
-            </RelativeLayout>
-<!--        </ViewFlipper>-->
-
-
-    </LinearLayout>
 
     <LinearLayout
 
@@ -586,12 +582,49 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
-
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/home_social"
-                />
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:id="@+id/imgv_facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/home_facebook"
+                    android:layout_marginHorizontal="10dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgv_insta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/home_insta"
+                    android:layout_marginHorizontal="10dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgv_youtube"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/home_youtube"
+                    android:layout_marginHorizontal="10dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgv_twitter"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/home_twitter"
+                    android:layout_marginHorizontal="10dp"
+                    />
+
+            </LinearLayout>
+
+
 
             <LinearLayout
                 android:layout_marginTop="20dp"

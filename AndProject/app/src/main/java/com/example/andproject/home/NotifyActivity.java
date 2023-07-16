@@ -26,5 +26,8 @@ public class NotifyActivity extends AppCompatActivity {
             Intent intent = new Intent(NotifyActivity.this, NotifySetActivity.class);
             startActivity(intent);
         });
+
+        actionBar = getSupportActionBar();
+        actionBar.hide();
     }
 }

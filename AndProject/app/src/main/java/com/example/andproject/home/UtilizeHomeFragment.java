@@ -35,11 +35,14 @@ public class UtilizeHomeFragment extends Fragment {
             @Override
             public void onCheckedChanged(ChipGroup group, int checkedId) {
                 if(checkedId == R.id.utilize_chip_1){
-                    binding.pagerUtilize.setCurrentItem(1, true);
+                    binding.pagerUtilize.setCurrentItem(0, true);
+                    adapter.notifyDataSetChanged();
                 }else if(checkedId == R.id.utilize_chip_2){
-                    binding.pagerUtilize.setCurrentItem(2, true);
+                    binding.pagerUtilize.setCurrentItem(1, true);
+                    adapter.notifyDataSetChanged();
                 }else if(checkedId == R.id.utilize_chip_3){
-                    binding.pagerUtilize.setCurrentItem(3, true);
+                    binding.pagerUtilize.setCurrentItem(2, true);
+                    adapter.notifyDataSetChanged();
                 }
             }
         });
