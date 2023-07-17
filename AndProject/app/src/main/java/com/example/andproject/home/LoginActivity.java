@@ -68,10 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                     Log.d("로그인값", "login: " + CommonVar.floLoginInfo);
                     binding.userid.requestFocus();
                 }
-//                else if(CommonVar.floLoginInfo.getId().equals("id")) {
-//                    boolean match = false;
-//
-//
+//                else if(! CommonVar.floLoginInfo.getId().equals("user_id") || ! CommonVar.floLoginInfo.getId().equals("pw")) {
 //                    Toast.makeText(this, "아이디 또는 비밀번호가 틀렸습니다.", Toast.LENGTH_SHORT).show();
 //                    binding.userid.setText("");
 //                    binding.password.setText("");
@@ -82,6 +79,7 @@ public class LoginActivity extends AppCompatActivity {
                 else{
                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
+                    Toast.makeText(this, binding.userid.getText().toString() +"님 환영합니다.", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -34,14 +34,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-        <ImageView
+        <Button
             android:id="@+id/imgv_utilize"
-            android:background="#AEC5CB"
+            android:background="@drawable/stroke_transparency"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="40dp"
-            android:layout_width="50dp"
+            android:layout_width="60dp"
             android:layout_height="30dp"
-            android:src="@drawable/utilize"
+            android:text="이용권"
+            android:textSize="8dp"
             />
 
         <ImageView
