@@ -106,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void googleLogin(){
-
+        //https://developer.android.com/training/id-auth/authenticate?hl=ko
         //https://develop-writing.tistory.com/32
         //https://soopeach.tistory.com/176
     }
