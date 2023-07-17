@@ -95,48 +95,22 @@
         app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
         app:strokeColor="#C69B9B"
         app:strokeWidth="3dp" />
-    <com.google.android.material.button.MaterialButton
+
+    <ImageView
+        android:id="@+id/imgv_kakaologin"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#4CAF50"
+        android:src="@drawable/kakao_login_img"
+        />
+
+    <com.navercorp.nid.oauth.view.NidOAuthLoginButton
+        android:id="@+id/buttonOAuthLoginImg"
         android:layout_gravity="center"
-        android:elevation="5dp"
-        android:text="네이버 아이디로 로그인(예정)"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/white"
-        app:icon="@drawable/ic_launcher_foreground"
-        app:iconGravity="start"
-        app:iconPadding="@dimen/cardview_compat_inset_shadow"
-        app:iconSize="50dp"
-        app:iconTint="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rippleColor="#C69B9B"
-        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
-        app:strokeColor="#C69B9B"
-        app:strokeWidth="3dp" />
-    <com.google.android.material.button.MaterialButton
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FFEB3B"
-        android:layout_gravity="center"
-        android:elevation="5dp"
-        android:text="카카오 아이디로 로그인(예정)"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/white"
-        app:icon="@drawable/ic_launcher_foreground"
-        app:iconGravity="start"
-        app:iconPadding="@dimen/cardview_compat_inset_shadow"
-        app:iconSize="50dp"
-        app:iconTint="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rippleColor="#C69B9B"
-        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
-        app:strokeColor="#C69B9B"
-        app:strokeWidth="3dp" />
+        android:layout_height="50dp" />
+
 
     <LinearLayout
         android:gravity="center"

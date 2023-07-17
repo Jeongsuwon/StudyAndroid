@@ -104,9 +104,6 @@ public class HomeFragment extends Fragment {
         binding.pagerToday.setAdapter(adapter);
         binding.pagerToday.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
 
-//        SliderAdapter adapter1 = new SliderAdapter(getContext(), getHomeMain());
-//        binding.recvHomeMain.setAdapter(adapter1);
-//        binding.recvHomeMain.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
 
         binding.imageSlide.setAdapter(new SliderAdapter(getContext(), getHomeMain()));
 
