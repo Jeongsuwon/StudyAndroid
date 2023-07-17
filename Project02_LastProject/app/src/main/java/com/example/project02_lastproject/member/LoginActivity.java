@@ -105,6 +105,12 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    public void googleLogin(){
+
+        //https://develop-writing.tistory.com/32
+        //https://soopeach.tistory.com/176
+    }
+
     public void kakaoLogin(Context context){
         KakaoSdk.init(this, "69d30d825ba2371d3cfbc070e6f9eafd");
         // 카카오톡이 설치되어 있으면 카카오톡으로 로그인, 아니면 카카오계정으로 로그인
