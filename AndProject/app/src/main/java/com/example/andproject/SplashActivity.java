@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -23,6 +24,7 @@ public class SplashActivity extends AppCompatActivity {
 
         actionBar = getSupportActionBar();
         actionBar.hide();
+        getWindow().setStatusBarColor(Color.parseColor("#000000"));
         ProgressDialog dialog = new ProgressDialog(this);
         dialog.setTitle("FLO");
         dialog.setCancelable(false);

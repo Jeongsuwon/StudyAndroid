@@ -34,9 +34,9 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderView
 
     @Override
     public void onBindViewHolder(@NonNull SliderViewHolder h, int i) {
-            h.binding.homeMainSubimg1.setImageResource(list.get(i).getImgHomesub1());
-            h.binding.homeMainSubimg2.setImageResource(list.get(i).getImgHomesub2());
-            h.binding.homeMainSubimg3.setImageResource(list.get(i).getImgHomesub3());
+//            h.binding.homeMainSubimg1.setImageResource(list.get(i).getImgHomesub1());
+//            h.binding.homeMainSubimg2.setImageResource(list.get(i).getImgHomesub2());
+//            h.binding.homeMainSubimg3.setImageResource(list.get(i).getImgHomesub3());
             h.binding.imgvHomemain.setImageResource(list.get(i).getImgHomeMain());
 
     }

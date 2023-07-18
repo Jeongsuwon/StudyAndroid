@@ -4,11 +4,11 @@
 <!--    <style name="Base.Theme.AndProject" parent="Theme.Material3.DayNight.NoActionBar">-->
         <!-- Customize your light theme here. -->
          <item name="colorPrimary">@color/white</item>
-        <item name="android:statusBarColor">@color/white</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="actionBarSize">50dp</item>
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
 
     </style>
+
 
     <style name="Theme.AndProject" parent="Base.Theme.AndProject" />
 

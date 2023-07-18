@@ -78,7 +78,9 @@ public class MovieActivity extends AppCompatActivity {
         });
 
 
-
+    binding.aroundMovieinfoDown.setOnClickListener(v -> {
+        finish();
+    });
 
 
     setContentView(binding.getRoot());

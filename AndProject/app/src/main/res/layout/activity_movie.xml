@@ -58,6 +58,78 @@
 
     </LinearLayout>
 
+        <RelativeLayout
+            android:id="@+id/rl_movie_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/tv_movie_info_info_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[MV]Seven(feat.Latto)"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                />
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/close"
+          />
+
+            <ImageView
+                android:layout_marginTop="3dp"
+                android:id="@+id/tv_movie_info_info_mic"
+                android:layout_below="@id/tv_movie_info_info_title"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/mic"
+                />
+
+            <TextView
+                android:id="@+id/tv_movie_info_info_singer"
+                android:layout_toRightOf="@id/tv_movie_info_info_mic"
+                android:layout_below="@id/tv_movie_info_info_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="정국"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                />
+            <ImageView
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/tv_movie_info_info_singer"
+                android:layout_below="@id/tv_movie_info_info_title"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:src="@drawable/forward"
+                />
+
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tv_movie_info_info_mic"
+                android:id="@+id/tv_moive_info_info_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2023.07.14 | MV"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                />
+            <TextView
+                android:layout_below="@id/tv_moive_info_info_date"
+                android:id="@+id/tv_moive_info_info_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seven(feat.Latto) - Clean Ver."
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                />
+        </RelativeLayout>
+
 
         <RelativeLayout
             android:layout_width="match_parent"
