@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -37,7 +38,7 @@ public class MovieActivity extends AppCompatActivity {
         binding = ActivityMovieBinding.inflate(getLayoutInflater());
         actionBar = getSupportActionBar();
         actionBar.hide();
-
+        getWindow().setStatusBarColor(Color.parseColor("#000000"));
 
         binding.aroundMovieInfoNotlike.setOnClickListener(view -> {
             changeImage();

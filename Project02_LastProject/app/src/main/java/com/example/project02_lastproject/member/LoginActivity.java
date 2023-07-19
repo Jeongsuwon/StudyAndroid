@@ -99,9 +99,9 @@ public class LoginActivity extends AppCompatActivity {
                 if(CommonVar.loginInfo==null){
                     Toast.makeText(this, "아이디 또는 비밀번호를 입력하세요", Toast.LENGTH_SHORT).show();
                 }else{
-
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
+                    Log.d("결과", "login: " + isResult + data);
                 }
             }
         });
