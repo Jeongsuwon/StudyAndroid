@@ -82,48 +82,7 @@
             android:src="@drawable/play"
             />
 
-        <RelativeLayout
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
 
-            <ImageView
-                android:layout_toLeftOf="@id/home_main_subimg3"
-                android:layout_marginLeft="50dp"
-                android:id="@+id/home_main_subimg1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/home_main_subimg1"
-                />
-            <ImageView
-                android:layout_toRightOf="@id/home_main_subimg3"
-                android:id="@+id/home_main_subimg2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/home_main_subimg2"
-                />
-            <ImageView
-                android:id="@+id/home_main_subimg3"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/home_main_subimg3"
-                />
-            <TextView
-                android:layout_below="@id/home_main_subimg3"
-                android:layout_marginLeft="50dp"
-                android:layout_marginBottom="23dp"
-                android:layout_marginTop="5dp"
-                android:textSize="10dp"
-                android:textColor="@color/white"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="이영현 - 그래서 그대는"
-                />
-
-        </RelativeLayout>
 
     </RelativeLayout>
 

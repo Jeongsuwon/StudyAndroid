@@ -168,11 +168,11 @@ public class HomeFragment extends Fragment {
 
     public ArrayList<HomeMainDTO> getHomeMain(){
         ArrayList<HomeMainDTO> list = new ArrayList<>();
-        list.add(new HomeMainDTO(R.drawable.recmd1, R.drawable.home_main_subimg1, R.drawable.home_main_subimg2, R.drawable.home_main_subimg3));
-        list.add(new HomeMainDTO(R.drawable.recmd2, R.drawable.home_main_subimg1, R.drawable.home_main_subimg2, R.drawable.home_main_subimg3));
-        list.add(new HomeMainDTO(R.drawable.recmd3, R.drawable.home_main_subimg1, R.drawable.home_main_subimg2, R.drawable.home_main_subimg3));
-        list.add(new HomeMainDTO(R.drawable.recmd4, R.drawable.home_main_subimg1, R.drawable.home_main_subimg2, R.drawable.home_main_subimg3));
-        list.add(new HomeMainDTO(R.drawable.recmd5, R.drawable.home_main_subimg1, R.drawable.home_main_subimg2, R.drawable.home_main_subimg3));
+        list.add(new HomeMainDTO(R.drawable.recmd1, R.drawable.home_main_subimg6, R.drawable.home_main_subimg5, R.drawable.home_main_subimg4, "You And I - 2NE1" ));
+        list.add(new HomeMainDTO(R.drawable.recmd2, R.drawable.home_main_subimg9, R.drawable.home_main_subimg8, R.drawable.home_main_subimg7, "11:11 - 태연(TAEYEON)"));
+        list.add(new HomeMainDTO(R.drawable.recmd3, R.drawable.home_main_subimg12, R.drawable.home_main_subimg11, R.drawable.home_main_subimg10, "봄날 - 방탄소년단"));
+        list.add(new HomeMainDTO(R.drawable.recmd4, R.drawable.home_main_subimg15, R.drawable.home_main_subimg14, R.drawable.home_main_subimg13, "New Face - 싸이(PSY)"));
+        list.add(new HomeMainDTO(R.drawable.recmd5, R.drawable.home_main_subimg1, R.drawable.home_main_subimg2, R.drawable.home_main_subimg3, "그래서 그대는 - 이영현"));
 
 
         return list;

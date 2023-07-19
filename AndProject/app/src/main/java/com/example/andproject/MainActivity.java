@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
 
 
 import com.example.andproject.around.AroundFragment;
@@ -44,20 +45,20 @@ public class MainActivity extends AppCompatActivity {
 
             }else if(item.getItemId() == R.id.tab_around){
                 fragment = new AroundFragment();
-                    actionBar.setTitle("둘러보기");
+                actionBar.setTitle(Html.fromHtml("<font color='#ffffff'>둘러보기 </font>"));
                     getWindow().setStatusBarColor(Color.parseColor("#000000"));
                     actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#000000")));
                     binding.container.setBackgroundColor(Color.parseColor("#000000"));
             }else if(item.getItemId() == R.id.tab_search){
                 fragment = new SearchFragment();
-                actionBar.setTitle("검색");
+                actionBar.setTitle(Html.fromHtml("<font color='#ffffff'>검색 </font>"));
                 actionBar.setIcon(R.drawable.search_mike1);
                 getWindow().setStatusBarColor(Color.parseColor("#18191B"));
                 actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#18191B")));
                 binding.container.setBackgroundColor(Color.parseColor("#18191B"));
             }else if(item.getItemId() == R.id.tab_repository){
                 fragment = new RepositoryFragment();
-                actionBar.setTitle("저장소");
+                actionBar.setTitle(Html.fromHtml("<font color='#ffffff'>저장소 </font>"));
                 getWindow().setStatusBarColor(Color.parseColor("#000000"));
                 actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#000000")));
                 binding.container.setBackgroundColor(Color.parseColor("#000000"));
