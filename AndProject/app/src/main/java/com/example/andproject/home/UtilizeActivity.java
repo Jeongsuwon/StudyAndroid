@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -23,10 +24,12 @@ public class UtilizeActivity extends AppCompatActivity {
 
     ActivityUtilizeBinding binding;
     ActionBar actionBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityUtilizeBinding.inflate(getLayoutInflater());
+        getWindow().setStatusBarColor(Color.parseColor("#000000"));
         setContentView(binding.getRoot());
 
         FragmentManager manager = getSupportFragmentManager();

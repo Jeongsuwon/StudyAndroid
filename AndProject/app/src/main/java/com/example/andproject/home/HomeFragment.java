@@ -79,6 +79,8 @@ public class HomeFragment extends Fragment {
                     .show();
         });
 
+
+
         binding.imgvUtilize.setOnClickListener(v -> {
             Intent intent = new Intent(getContext(), UtilizeActivity.class);
             startActivity(intent);

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.example.andproject.R;
@@ -20,7 +21,7 @@ public class FavorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityFavorBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        getWindow().setStatusBarColor(Color.parseColor("#000000"));
 
         binding.recvFavorMusic.setAdapter(new FavorAdapter(this, list()));
         binding.recvFavorMusic.setLayoutManager(new LinearLayoutManager(this));

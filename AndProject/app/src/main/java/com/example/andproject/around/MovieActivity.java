@@ -14,6 +14,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.SlidingDrawer;
 
 import com.example.andproject.R;
@@ -28,6 +29,9 @@ public class MovieActivity extends AppCompatActivity {
     ActivityMovieBinding binding;
     ActionBar actionBar;
     int imageIndex = 0;
+    int slideIndex = 0;
+    Animation slide_in, slide_out;
+
 
 
 
@@ -84,6 +88,25 @@ public class MovieActivity extends AppCompatActivity {
     });
 
 
+    slide_in = AnimationUtils.loadAnimation(this, R.anim.slide_in);
+    slide_out = AnimationUtils.loadAnimation(this, R.anim.slide_out);
+
+
+    binding.aroundMovieInfo.setOnClickListener(v -> {
+//        if(slideIndex==0){
+            binding.rlMovieInfo.setVisibility(View.VISIBLE);
+            binding.rlMovieInfo.startAnimation(slide_out);
+//            slideIndex = 1;
+//        }else{
+//            slideIndex = 1;
+//        }
+
+    });
+
+    binding.imgvSlideClose.setOnClickListener(v -> {
+        binding.rlMovieInfo.setVisibility(View.GONE);
+        binding.rlMovieInfo.startAnimation(slide_in);
+    });
     setContentView(binding.getRoot());
     }
 

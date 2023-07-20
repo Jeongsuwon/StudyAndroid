@@ -62,6 +62,8 @@ dependencies {
     implementation 'com.github.Spikeysanju:MotionToast:1.4'
 
     implementation 'com.github.hannesa2:AndroidSlidingUpPanel:4.2.1'
+//<BottomSheetDialog>
+    implementation 'com.google.android.material:material:1.1.0'
 
 
 

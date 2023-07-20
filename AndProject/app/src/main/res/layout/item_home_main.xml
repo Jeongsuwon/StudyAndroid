@@ -25,11 +25,13 @@
             android:layout_toLeftOf="@id/home_main_subimg3"
             android:layout_marginLeft="50dp"
             android:id="@+id/home_main_subimg1"
+            android:layout_marginTop="10dp"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/home_main_subimg1"
             />
         <ImageView
+            android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/home_main_subimg3"
             android:id="@+id/home_main_subimg2"
             android:layout_width="60dp"

@@ -3,6 +3,7 @@ package com.example.andproject.home;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.example.andproject.R;
@@ -15,6 +16,7 @@ public class SettingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivitySettingBinding.inflate(getLayoutInflater());
+        getWindow().setStatusBarColor(Color.parseColor("#000000"));
         setContentView(binding.getRoot());
 
 
