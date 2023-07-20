@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import com.example.andproject.databinding.ActivitySplashBinding;
 import com.example.andproject.home.LoginActivity;
@@ -26,7 +28,9 @@ public class SplashActivity extends AppCompatActivity {
         actionBar.hide();
         getWindow().setStatusBarColor(Color.parseColor("#000000"));
         ProgressDialog dialog = new ProgressDialog(this);
-        dialog.setTitle("FLO");
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.splash);
+        dialog.setTitle("flo");
+
         dialog.setCancelable(false);
         dialog.show();
 

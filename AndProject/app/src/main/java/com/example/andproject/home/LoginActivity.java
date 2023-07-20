@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.CheckBox;
@@ -25,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        getWindow().setStatusBarColor(Color.parseColor("#000000"));
         actionBar = getSupportActionBar();
         actionBar.hide();
 
@@ -42,7 +43,10 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-
+        binding.imgvLoginLogo.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+        });
 
         binding.btnLogin.setOnClickListener(view -> {
             login();
