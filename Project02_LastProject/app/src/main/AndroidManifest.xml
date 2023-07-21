@@ -51,7 +51,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".member.LoginActivity"
+            android:name=".file.FileActivity"
             android:exported="false" />
         <activity
             android:name=".practice.PracActivity"
@@ -60,7 +60,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".file.FileActivity"
+            android:name=".member.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

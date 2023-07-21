@@ -1,15 +1,21 @@
 package com.example.project02_lastproject.file;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.project02_lastproject.R;
@@ -33,6 +39,8 @@ public class FileActivity extends AppCompatActivity {
     //갤러리 또는 카메라에서 발생되는 이미지를 File형태로 바꾸고 해당하는 파일을 Multipart형태로 Spring전송.
     ActivityFileBinding binding;
     private final int REQ_Gallery = 1000;
+
+    ActivityResultLauncher<Intent> launcher; // <-- onCreate에서 초기화하면 오류발생.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +63,7 @@ public class FileActivity extends AppCompatActivity {
                 showGallery();
             }else if(dialog_item[i].equals("카메라")){
                 //카메라 로직
+                showCamera();
             }
             dialog.dismiss();
         });
@@ -62,6 +71,50 @@ public class FileActivity extends AppCompatActivity {
         dialog.show();
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult result) {
+                    //액티비티(카메라 액티비티)가 종료되면 콜백으로 데이터를 받는 부분. (기존에는 onActivityResult메소드가 실행/ 현재는 해당 메소드)
+                Glide.with(FileActivity.this).load(camera_uri).into(binding.imgv);
+                File file = new File(getRealPath(camera_uri));
+
+                if(file!=null){
+                    Toast.makeText(FileActivity.this, "수업끝", Toast.LENGTH_SHORT).show();
+
+                    RequestBody fileBody = RequestBody.create(MediaType.parse("image/jpeg"), file);
+                    MultipartBody.Part filePart = MultipartBody.Part.createFormData("file", "test.jpg", fileBody);
+                    RetInterface api = new RetClient().getRet().create(RetInterface.class);
+                    api.clientSendFile("file.f", new HashMap<>(), filePart).enqueue(new Callback<String>() {
+                        @Override
+                        public void onResponse(Call<String> call, Response<String> response) {
+
+                        }
+
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
+                            t.getMessage();
+                        }
+                    });
+                }
+            }
+        });
+    }
+
+
+    Uri camera_uri = null;
+
+    public void showCamera(){
+        //ContentResolver(). 앱 -> 컨텐트리졸버(작업자) -> 미디어 저장소
+        camera_uri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, new ContentValues());
+        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, camera_uri);
+        launcher.launch(cameraIntent);
+    }
+
 
     public void showGallery(){
         Intent intent = new Intent();
