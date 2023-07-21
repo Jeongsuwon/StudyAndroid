@@ -26,67 +26,126 @@
 
 
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginHorizontal="20dp"
-                android:id="@+id/edt_id"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="96dp"
-                android:hint="아이디(이메일)"
-                android:inputType="textEmailAddress"
-                android:selectAllOnFocus="true"
-                />
+                android:hint="아이디"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconContentDescription="아이디"
+                app:counterMaxLength="20"
+                app:boxStrokeColor="@color/white"
+                >
 
 
-            <EditText
-                app:passwordToggleEnabled="true"
-                android:layout_marginHorizontal="20dp"
-                android:id="@+id/edt_password"
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="20dp"
                 android:hint="비밀번호"
-                android:inputType="textPassword"
-                android:selectAllOnFocus="true"
-                />
-
-            <EditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="#123456"
+                app:helperTextTextColor="#8a8a8a"
+                app:counterMaxLength="20"
                 app:passwordToggleEnabled="true"
+                >
+
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    app:errorEnabled="true"
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginHorizontal="20dp"
-                android:id="@+id/edt_name"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:hint="이름"
-                android:inputType="textPassword"
-                android:selectAllOnFocus="true"
-                />
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:counterMaxLength="20"
+                app:boxStrokeColor="@color/white"
+                >
 
-            <EditText
-                app:passwordToggleEnabled="true"
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginHorizontal="20dp"
-                android:id="@+id/edt_phone"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:hint="핸드폰번호"
-                android:inputType="textPassword"
-                android:selectAllOnFocus="true"
-                />
+                android:hint="핸드폰번호(-기호 생략)"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:counterMaxLength="20"
+                app:boxStrokeColor="@color/white"
+                >
 
 
 
-            <Button
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_register"
-                android:layout_marginHorizontal="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="30dp"
-                android:enabled="false"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#DFDFDF"
+                android:layout_gravity="center"
+                android:elevation="5dp"
                 android:text="회원가입"
-                app:layout_constraintVertical_bias="0.2" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white"
+                app:iconGravity="start"
+                app:iconSize="50dp"
+                app:iconTint="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:rippleColor="#DFDFDF"
+                app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+                app:strokeColor="#DFDFDF"
+                app:strokeWidth="3dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
