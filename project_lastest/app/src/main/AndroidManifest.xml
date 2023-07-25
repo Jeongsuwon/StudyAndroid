@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Project_lastest"
         tools:targetApi="31">
         <activity
+            android:name=".calendar.CalendarActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

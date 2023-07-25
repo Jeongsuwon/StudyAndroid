@@ -5,22 +5,31 @@
         android:id="@+id/tab_travel"
         app:showAsAction="always"
         android:title="여행지"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+
+
         />
     <item
         android:id="@+id/tab_chat"
         app:showAsAction="always"
         android:title="채팅"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
         />
     <item
         android:id="@+id/tab_home"
         app:showAsAction="always"
-        android:title="Ling"
         android:enabled="true"
+        android:icon="@drawable/ling"
+        android:title="홈"
         />
     <item
         android:id="@+id/tab_board"
         app:showAsAction="always"
         android:title="게시판"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
 
         />
 
@@ -28,6 +37,13 @@
         android:id="@+id/tab_store"
         app:showAsAction="always"
         android:title="스토어"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
 
         />
 </menu>
+
+<!--    app:showAsAction="always"-->
+<!--    android:title="Ling"-->
+<!--    android:enabled="true"-->
+<!--    android:checked="true"-->
