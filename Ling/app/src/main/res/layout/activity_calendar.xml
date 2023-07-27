@@ -95,6 +95,7 @@
 
             />
         <TextView
+            android:id="@+id/tv_calendar_now"
             android:layout_marginRight="20dp"
             android:gravity="right"
             android:layout_width="wrap_content"
@@ -329,6 +330,7 @@
 
                 />
             <TextView
+                android:id="@+id/tv_100day"
                 android:layout_marginLeft="10dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -349,6 +351,7 @@
             android:orientation="horizontal"
             >
             <TextView
+
                 android:layout_marginLeft="10dp"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -357,10 +360,10 @@
 
                 />
             <TextView
+                android:id="@+id/tv_200day"
                 android:layout_marginLeft="10dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="(일정)못하겠어"
                 android:textStyle="bold"
                 android:layout_weight="1"
 
@@ -383,10 +386,10 @@
 
                 />
             <TextView
+                android:id="@+id/tv_300day"
                 android:layout_marginLeft="10dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="(일정)못하겠어"
                 android:textStyle="bold"
                 android:layout_weight="1"
 
@@ -402,6 +405,7 @@
             android:orientation="horizontal"
             >
             <TextView
+
                 android:layout_marginLeft="10dp"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -410,10 +414,10 @@
 
                 />
             <TextView
+                android:id="@+id/tv_365day"
                 android:layout_marginLeft="10dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="(일정)못하겠어"
                 android:textStyle="bold"
                 android:layout_weight="1"
 
