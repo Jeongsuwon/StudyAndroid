@@ -26,6 +26,11 @@ public class HomeFragment extends Fragment {
             startActivity(intent);
         });
 
+        binding.imgvCalendar.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext(), CalendarActivity.class);
+            startActivity(intent);
+        });
+
 
         return binding.getRoot();
 
