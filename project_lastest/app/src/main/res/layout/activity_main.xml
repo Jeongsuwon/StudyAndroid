@@ -16,6 +16,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@drawable/gradation"
+        android:fitsSystemWindows="true"
         />
 
 
@@ -26,8 +27,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/home_btm_nav"
+        app:labelVisibilityMode="unlabeled"
         android:background="@android:color/transparent"
         app:itemBackground="@color/white"
+        android:fitsSystemWindows="true"
+        app:itemIconSize="40dp"
         />
 
 
