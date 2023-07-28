@@ -53,7 +53,7 @@
         <EditText
             android:paddingVertical="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:hint="일정 타이틀"
             android:textSize="17dp"
             />
@@ -65,6 +65,7 @@
             android:layout_marginVertical="10dp"
             />
         <LinearLayout
+            android:paddingVertical="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"

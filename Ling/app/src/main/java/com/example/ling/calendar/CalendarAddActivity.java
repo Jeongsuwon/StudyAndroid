@@ -23,6 +23,7 @@ public class CalendarAddActivity extends AppCompatActivity {
 
         Spinner spinner_default = new Spinner();
         spinner_default.setName("유형선택");
+        spinner_default.setSpinnerImg(R.drawable.spinner_default);
         list.add(spinner_default);
 
         Spinner wedding = new Spinner();
