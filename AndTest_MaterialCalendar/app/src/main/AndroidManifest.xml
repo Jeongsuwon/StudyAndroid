@@ -23,7 +23,7 @@
         </activity>
 
         <activity
-            android:name=".CalendarActivity"
+            android:name=".CalendarFuncActivity"
             android:label="Standard calendar" />
 
         <activity

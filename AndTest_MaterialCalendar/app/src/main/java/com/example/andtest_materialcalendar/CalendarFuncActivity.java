@@ -22,12 +22,12 @@ import java.util.Random;
  * Created by Mateusz Kornakiewicz on 26.05.2017.
  */
 
-public class CalendarActivity extends AppCompatActivity {
+public class CalendarFuncActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.calendar_activity);
+        setContentView(R.layout.calendar_func_activity);
 
         List<EventDay> events = new ArrayList<>();
 

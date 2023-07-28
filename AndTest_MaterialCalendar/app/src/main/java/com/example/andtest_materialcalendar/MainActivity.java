@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements OnSelectDateListe
         Button openCalendarButton = (Button) findViewById(R.id.openCalendarButton);
 
         openCalendarButton.setOnClickListener(v -> {
-            Intent intent = new Intent(this, CalendarActivity.class);
+            Intent intent = new Intent(this, CalendarFuncActivity.class);
             startActivity(intent);
         });
 
