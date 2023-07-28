@@ -1,17 +1,14 @@
-package com.example.ling.home;
+package com.example.ling.chat;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.example.ling.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Chat1Adapter extends BaseAdapter {
     ArrayList<ChatDTO> list;

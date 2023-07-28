@@ -1,4 +1,4 @@
-package com.example.ling.home;
+package com.example.ling.chat;
 
 import android.content.Context;
 import android.view.LayoutInflater;

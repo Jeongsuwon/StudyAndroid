@@ -1,4 +1,4 @@
-package com.example.ling.home;
+package com.example.ling.chat;
 
 public class G {
 

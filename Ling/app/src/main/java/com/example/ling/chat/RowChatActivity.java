@@ -1,4 +1,4 @@
-package com.example.ling.home;
+package com.example.ling.chat;
 
 import androidx.appcompat.app.AppCompatActivity;
 

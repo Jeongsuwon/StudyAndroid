@@ -1,4 +1,4 @@
-package com.example.ling.home;
+package com.example.ling.calendar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.ling.MainActivity;
-import com.example.ling.R;
 import com.example.ling.databinding.ActivityCalendarBinding;
 
 import java.text.ParseException;
@@ -17,7 +16,7 @@ import java.util.Date;
 public class CalendarActivity extends AppCompatActivity {
 
     ActivityCalendarBinding binding;
-    private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy/M/d");
+    private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy/MM/dd");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +32,13 @@ public class CalendarActivity extends AppCompatActivity {
             Intent intent = new Intent(CalendarActivity.this, CalendarAddActivity.class);
             startActivity(intent);
         });
+
+        binding.lnMoreCalendar.setOnClickListener(v -> {
+            Intent intent = new Intent(CalendarActivity.this, CalendarFuncActivity.class);
+            startActivity(intent);
+        });
+
+
 
 
         Date date = new Date();

@@ -67,4 +67,10 @@ dependencies {
 
 
     implementation group: 'com.github.bumptech.glide', name: 'glide', version: '4.11.0'
+
+
+
+    implementation "androidx.cardview:cardview:1.0.0"
+
+
 }
