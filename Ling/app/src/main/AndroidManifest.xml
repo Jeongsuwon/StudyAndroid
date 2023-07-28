@@ -26,13 +26,16 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".home.CalendarAddActivity"
+            android:name=".calendar.CalendarFuncActivity"
+            android:exported="false" />
+        <activity
+            android:name=".calendar.CalendarAddActivity"
             android:exported="false" />
         <activity
             android:name=".login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".home.RowChatActivity"
+            android:name=".chat.RowChatActivity"
             android:exported="false" />
         <activity
             android:name=".home.PhotoActivity"
@@ -74,7 +77,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".home.CalendarActivity"
+            android:name=".calendar.CalendarActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
