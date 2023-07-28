@@ -46,7 +46,7 @@ public class CalendarActivity extends AppCompatActivity {
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
-        
+
         Calendar cal1 = Calendar.getInstance();
         Calendar cal2 = Calendar.getInstance();
         Calendar cal3 = Calendar.getInstance();
