@@ -11,7 +11,7 @@ import com.applandeo.materialcalendarview.CalendarView;
 import com.applandeo.materialcalendarview.EventDay;
 import com.applandeo.materialcalendarview.exceptions.OutOfDateRangeException;
 import com.applandeo.materialcalendarview.utils.DateUtils;
-import com.example.andtest_materialcalendar.utils.DrawableUtils;
+import com.example.ling.R;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -27,7 +27,7 @@ public class CalendarFuncActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.calendar_func_activity);
+        setContentView(R.layout.activity_func_calendar);
 
         List<EventDay> events = new ArrayList<>();
 
