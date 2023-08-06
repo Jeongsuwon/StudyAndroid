@@ -1,19 +1,7 @@
 package com.example.ling.home;
 
-import static java.security.AccessController.getContext;
-
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.content.ContentValues;
-import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
@@ -22,17 +10,19 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.EditText;
+
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.example.ling.MainActivity;
-import com.example.ling.R;
 import com.example.ling.common.RetClient;
 import com.example.ling.common.RetInterface;
 import com.example.ling.databinding.ActivityPhotoBinding;
@@ -59,23 +49,35 @@ public class PhotoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityPhotoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        Glide.with(this).load("http://192.168.0.28/hanul/img//andimg.jpg").into(binding.imageView);
+        Glide.with(this).load("http://192.168.0.28/hanul/img//andimg.jpg").into(binding.imgvElbumCamera);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
 
-        binding.btnCamera.setOnClickListener(v -> {
-            cameraDialog = new CameraDialog(this);
-            cameraDialog.show();
-            cameraDialog.findViewById(R.id.ln_camera).setOnClickListener(v2->{//imgv_photos               showGallery();
+
+            binding.imgvElbumCamera.setOnClickListener(v->{//imgv_photos               showGallery();
                 showCamera();
             });
-            cameraDialog.findViewById(R.id.ln_photos).setOnClickListener(v2->{//imgv_photos               showGallery();
-                showGallery();
+
+            binding.imgvFolderAdd.setOnClickListener(view -> {
+                AlertDialog.Builder follder = new AlertDialog.Builder(this);
+                follder.setTitle("생성할 폴더명");
+                final EditText name = new EditText(this);
+                follder.setView(name);
+                follder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) { //확인 버튼을 클릭했을때
+
+                    }
+                });
+                follder.setNegativeButton("취소",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) { //취소 버튼을 클ㅣ
+                    }
+                });
+                follder.show();
             });
-        });
+
 
 
     }
@@ -88,7 +90,7 @@ public class PhotoActivity extends AppCompatActivity {
             @Override
             public void onActivityResult(ActivityResult result) {
                 //액티비티(카메라 액티비티)가 종료되면 콜백으로 데이터를 받는 부분. (기존에는 onActivityResult메소드가 실행/ 현재는 해당 메소드)
-                Glide.with(PhotoActivity.this).load(camera_uri).into(binding.imageView);
+                Glide.with(PhotoActivity.this).load(camera_uri).into(binding.imgvElbumCamera);
                 File file = new File(getRealPath(camera_uri));
 
                 if(file!=null){
@@ -136,7 +138,7 @@ public class PhotoActivity extends AppCompatActivity {
             //갤러리 액티비티가 종료되었다. (사용자가 사진을 선택했는지)
             Log.d("갤러리", "onActivityResult: " + data.getData());
             Log.d("갤러리", "onActivityResult: " + data.getData().getPath());
-            Glide.with(this).load(data.getData()).into(binding.imageView); //갤러리 이미지가 잘 붙는지??
+            Glide.with(this).load(data.getData()).into(binding.imgvElbumCamera); //갤러리 이미지가 잘 붙는지??
             String img_path = getRealPath(data.getData());
 
             //MultiPart 형태로 전송 (File)
