@@ -1,9 +1,9 @@
 package com.example.ling.calendar;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ling.MainActivity;
 import com.example.ling.databinding.ActivityCalendarBinding;
@@ -37,6 +37,13 @@ public class CalendarActivity extends AppCompatActivity {
             Intent intent = new Intent(CalendarActivity.this, CalendarFuncActivity.class);
             startActivity(intent);
         });
+
+        Intent intent = getIntent();//방금 LoginActivity에서 startActivity('indent') 사용된 intent를 가져옴. (내부에 넣어둔(putExtra) 데이터를 빼오기 위해서)
+
+        String title = intent.getStringExtra("title");
+        String cal_date = intent.getStringExtra("date");
+        binding.tvCalendarTitle.setText(title);
+        binding.tvCalendarDate.setText(cal_date);
 
 
 
@@ -75,5 +82,8 @@ public class CalendarActivity extends AppCompatActivity {
         binding.tv200day.setText(two_hundred);
         binding.tv300day.setText(three_hundred);
         binding.tv365day.setText(first_anniversary);
+
     }
+
+
 }

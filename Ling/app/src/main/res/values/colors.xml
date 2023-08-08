@@ -8,4 +8,10 @@
     <color name="sampleLight">#388E3C</color>
     <color name="defaultColor">#595959</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <color name="colorPrimaryDark">#CFD8DC</color>
+    <color name="ym1">#123456</color>
+    <color name="ym2">#6DEABE</color>
+    <color name="sampleLighter">#4CAF50</color>
 </resources>

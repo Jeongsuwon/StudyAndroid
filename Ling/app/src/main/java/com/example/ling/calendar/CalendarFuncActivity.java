@@ -18,9 +18,6 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Created by Mateusz Kornakiewicz on 26.05.2017.
- */
 
 public class CalendarFuncActivity extends AppCompatActivity {
 
@@ -113,4 +110,6 @@ public class CalendarFuncActivity extends AppCompatActivity {
 
         return calendar;
     }
+
+
 }
